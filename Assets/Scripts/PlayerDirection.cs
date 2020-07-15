@@ -12,6 +12,7 @@ public class PlayerDirection : MonoBehaviour
     void Start()
     {
         directionX = 1;
+        idleX = 1;
         directionY = 0;
     }
 
@@ -23,8 +24,8 @@ public class PlayerDirection : MonoBehaviour
 
     void GetDirectionFromInput()
     {
-        float inputValX = Input.GetAxis("Horizontal");
-        float inputValY = Input.GetAxis("Vertical");
+        float inputValX = Input.GetAxisRaw("Horizontal");
+        float inputValY = Input.GetAxisRaw("Vertical");
 
         if(inputValX < 0)
         {
