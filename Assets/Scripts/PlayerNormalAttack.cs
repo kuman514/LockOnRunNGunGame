@@ -38,7 +38,7 @@ public class PlayerNormalAttack : MonoBehaviour
         {
             if (finalYDirection < 0)
             {
-                finalYDirection = 0f;
+                finalYDirection = -0.25f;
                 finalXDirection = direction.idleX;
             }
             else if (finalYDirection > 0)
