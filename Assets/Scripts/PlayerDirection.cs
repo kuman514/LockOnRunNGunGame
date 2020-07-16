@@ -6,7 +6,7 @@ public class PlayerDirection : MonoBehaviour
 {
     public int directionX { get; private set; }
     public int directionY { get; private set; }
-    private int idleX;
+    public int idleX { get; private set; }
 
     // Start is called before the first frame update
     void Start()
