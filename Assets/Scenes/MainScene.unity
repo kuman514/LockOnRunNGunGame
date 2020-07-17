@@ -622,6 +622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLevel: 8
+  roundsPerSecond: 10
+  projectilePrefab: {fileID: 2835993158931383699, guid: 0a4c9ca435a9ab34cae50b4ec0716d35,
+    type: 3}
 --- !u!1 &1248713067
 GameObject:
   m_ObjectHideFlags: 0

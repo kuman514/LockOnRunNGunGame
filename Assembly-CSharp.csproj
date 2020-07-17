@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerLockOnAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerNormalAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/Unity2018/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
