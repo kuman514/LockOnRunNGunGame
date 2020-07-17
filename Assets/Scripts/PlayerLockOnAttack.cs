@@ -7,17 +7,16 @@ public class PlayerLockOnAttack : MonoBehaviour
     [Header("Missile Specification")]
     [Tooltip("Maximum missiles that player can have")]
     public int maxMissiles = 8;
+    public float range = 3f;
 
     public int curMissiles { get; private set; }
 
-    float range;
     GameObject lockOnAimPoint;
     PlayerDirection direction;
 
     // Start is called before the first frame update
     void Start()
     {
-        range = 3f;
         lockOnAimPoint = transform.Find("LockOnAimPoint").gameObject;
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;

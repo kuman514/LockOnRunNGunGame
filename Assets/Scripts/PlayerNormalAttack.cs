@@ -13,6 +13,7 @@ public class PlayerNormalAttack : MonoBehaviour
     public int curLevel { get; private set; }
 
     private GameObject aimPoint;
+    private GameObject collisionRange;
     private PlayerDirection direction;
     private CharacterController controller;
 
@@ -25,6 +26,7 @@ public class PlayerNormalAttack : MonoBehaviour
     void Start()
     {
         aimPoint = transform.Find("NormalAimPoint").gameObject;
+        collisionRange = transform.Find("CollisionRange").gameObject;
         direction = GetComponent<PlayerDirection>();
         controller = GetComponent<CharacterController>();
 
@@ -75,7 +77,7 @@ public class PlayerNormalAttack : MonoBehaviour
     {
         if (isFireable() && Input.GetButton("Fire1"))
         {
-            Vector3 shootDirection = aimPoint.transform.position - transform.position;
+            Vector3 shootDirection = aimPoint.transform.position - collisionRange.transform.position;
             GameObject projectile = Instantiate(projectilePrefab, aimPoint.transform);
             PlayerProjectile pp = projectile.transform.gameObject.GetComponent<PlayerProjectile>();
             pp.direction = shootDirection.normalized;

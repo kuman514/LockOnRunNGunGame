@@ -11,16 +11,19 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeedF = 10f;
     [Tooltip("Gravity on this character")]
     public float gravity = 10f;
+    public float crouchSpeed = 3f;
 
     private CharacterController controller;
     private Vector3 MoveDir;
     private PlayerState playerState;
+    private GameObject collisionRange;
 
     void Start()
     {
         MoveDir = Vector3.zero;
         controller = GetComponent<CharacterController>();
         playerState = GetComponent<PlayerState>();
+        collisionRange = transform.Find("CollisionRange").gameObject;
     }
 
     void Update()
@@ -48,6 +51,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
                 MoveDir.y = jumpSpeedF;
+
+            if (Input.GetAxisRaw("Vertical") < 0)
+            {
+                collisionRange.transform.localPosition = new Vector3(0, -0.25f, collisionRange.transform.localPosition.z);
+            }
+            else
+            {
+                collisionRange.transform.localPosition = new Vector3(0, 0, collisionRange.transform.localPosition.z);
+            }
+        }
+        else
+        {
+            collisionRange.transform.localPosition = new Vector3(0, 0, collisionRange.transform.localPosition.z);
         }
 
         MoveDir.y -= gravity * Time.deltaTime;

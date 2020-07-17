@@ -18,13 +18,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerProjectile
+  - EnemyProjectile
+  - Cursor
+  - Floor
+  - Enemy
+  - EnemyMissile
+  - Wall
   - 
   - 
   - 
