@@ -33,6 +33,15 @@ public class PlayerProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Collision method here
+        Debug.Log("Projectile Collided");
+
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Collision method here
+        Debug.Log("Projectile Collided");
 
         Destroy(gameObject);
     }
