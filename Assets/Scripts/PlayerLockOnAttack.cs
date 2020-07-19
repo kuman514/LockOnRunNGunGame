@@ -26,10 +26,15 @@ public class PlayerLockOnAttack : MonoBehaviour
     void Update()
     {
         SetPointDirection();
+        LockOnDetection();
     }
 
     void SetPointDirection()
     {
         lockOnAimPoint.transform.localPosition = new Vector3(direction.directionX, direction.directionY, 0).normalized * range;
+    }
+
+    void LockOnDetection()
+    {
     }
 }
