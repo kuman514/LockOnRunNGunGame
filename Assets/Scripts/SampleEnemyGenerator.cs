@@ -8,6 +8,8 @@ public class SampleEnemyGenerator : MonoBehaviour
     public GameObject testEnemyPrefab;
     public Transform startPoint;
 
+    private Vector3 originalPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,11 @@ public class SampleEnemyGenerator : MonoBehaviour
     {
         while(true)
         {
+            originalPos = startPoint.localPosition;
+            startPoint.localPosition = new Vector3(startPoint.localPosition.x, startPoint.localPosition.y + Random.Range(0f, 10f), startPoint.localPosition.z + Random.Range(-1f, 1f));
             GameObject flyingEnemy = Instantiate(testEnemyPrefab, startPoint);
+            startPoint.localPosition = originalPos;
+
             flyingEnemy.transform.SetParent(null);
             yield return new WaitForSeconds(secondsPerEnemy);
         }
