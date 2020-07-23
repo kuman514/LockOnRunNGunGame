@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 483553994367601457}
   - component: {fileID: 483553994367601458}
   - component: {fileID: 8006236003030034465}
+  - component: {fileID: 4908379550914501475}
   m_Layer: 13
   m_Name: SampleFlyingEnemy
   m_TagString: Target
@@ -158,3 +159,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   direction: {x: 1, y: 0, z: 0}
+--- !u!114 &4908379550914501475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483553994367601456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9db757e7575f24683949f2764c2109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 10
