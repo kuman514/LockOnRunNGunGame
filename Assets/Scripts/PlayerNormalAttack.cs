@@ -9,6 +9,7 @@ public class PlayerNormalAttack : MonoBehaviour
     public int maxLevel = 4;
     public float roundsPerSecond = 10f;
     public GameObject projectilePrefab;
+    public float[] shotDirections;
 
     public int curLevel { get; private set; }
 
@@ -17,7 +18,6 @@ public class PlayerNormalAttack : MonoBehaviour
     private PlayerDirection direction;
     private CharacterController controller;
 
-    private Vector3[] shotDirections = { };
     private int shotSeq;
     private float secondsPerRound;
     private float fireTimer;
@@ -80,6 +80,19 @@ public class PlayerNormalAttack : MonoBehaviour
             Vector3 shootDirection = aimPoint.transform.position - collisionRange.transform.position;
             GameObject projectile = Instantiate(projectilePrefab, aimPoint.transform);
             PlayerProjectile pp = projectile.transform.gameObject.GetComponent<PlayerProjectile>();
+
+            if (shootDirection.x == 0)
+            {
+                shootDirection.x += shotDirections[shotSeq];
+            }
+            else if (shootDirection.y == 0)
+            {
+                shootDirection.y += shotDirections[shotSeq];
+            }
+
+            shotSeq++;
+            shotSeq = shotSeq % shotDirections.Length;
+
             pp.direction = shootDirection.normalized;
 
             projectile.transform.SetParent(null);
