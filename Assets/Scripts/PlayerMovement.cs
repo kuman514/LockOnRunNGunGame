@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("Character Ground Specification")]
     [Tooltip("Ground speed")]
     public float speed = 6f;
+    [Tooltip("Ground speed divisor if crouch")]
+    [Range(1f, 10f)]
+    public float crouchSpeedDivisor = 3f;
     [Tooltip("Jump force")]
     public float jumpSpeedF = 10f;
     [Tooltip("Gravity on this character")]
     public float gravity = 10f;
-    public float crouchSpeed = 3f;
 
     private CharacterController controller;
     private Vector3 MoveDir;
@@ -55,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetAxisRaw("Vertical") < 0)
             {
                 collisionRange.transform.localPosition = new Vector3(0, -0.25f, collisionRange.transform.localPosition.z);
+                MoveDir.x /= crouchSpeedDivisor;
             }
             else
             {
