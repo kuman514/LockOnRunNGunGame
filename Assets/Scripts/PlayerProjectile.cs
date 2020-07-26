@@ -62,7 +62,6 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (col.transform.CompareTag("Target"))
         {
-            UnityEngine.Debug.Log("hit enemy");
             EnemyHealth eh = col.transform.GetComponent<EnemyHealth>();
             if (eh != null)
             {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class PlayerLockOnAttack : MonoBehaviour
@@ -10,14 +11,17 @@ public class PlayerLockOnAttack : MonoBehaviour
     public float range = 3f;
 
     public int curMissiles { get; private set; }
+    public Vector3 lockonCursorPos { get; private set; }
 
     GameObject lockOnAimPoint;
     PlayerDirection direction;
+    Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
         lockOnAimPoint = transform.Find("LockOnAimPoint").gameObject;
+        cam = Camera.main;
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;
     }
@@ -26,6 +30,7 @@ public class PlayerLockOnAttack : MonoBehaviour
     void Update()
     {
         SetPointDirection();
+        SetLockOnCursorPos();
         LockOnDetection();
     }
 
@@ -34,7 +39,13 @@ public class PlayerLockOnAttack : MonoBehaviour
         lockOnAimPoint.transform.localPosition = new Vector3(direction.directionX, direction.directionY, 0).normalized * range;
     }
 
+    void SetLockOnCursorPos()
+    {
+        lockonCursorPos = cam.WorldToScreenPoint(lockOnAimPoint.transform.position);
+    }
+
     void LockOnDetection()
     {
+
     }
 }
