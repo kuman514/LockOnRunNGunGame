@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
      <Compile Include="Assets\Scripts\PlayerDirection.cs" />
      <Compile Include="Assets\Scripts\PlayerLockOnAttack.cs" />
+     <Compile Include="Assets\Scripts\PlayerLockOnUICursor.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerNormalAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
