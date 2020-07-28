@@ -8,7 +8,8 @@ public class PlayerLockOnAttack : MonoBehaviour
     [Header("Missile Specification")]
     [Tooltip("Maximum missiles that player can have")]
     public int maxMissiles = 8;
-    public float range = 3f;
+    public float range = 4f;
+    public float lockOnRadius = 1.5f;
 
     public int curMissiles { get; private set; }
     public Vector3 lockonCursorPos { get; private set; }
@@ -46,6 +47,17 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void LockOnDetection()
     {
+        //Vector3 dir = new Vector3(0, 0, 1);
+        Vector3 dir = new Vector3(lockonCursorPos.x, lockonCursorPos.y, cam.nearClipPlane);
+        dir = lockOnAimPoint.transform.position - cam.ScreenToWorldPoint(dir);
 
+        RaycastHit[] target = Physics.SphereCastAll(lockOnAimPoint.transform.position, lockOnRadius, dir);
+        foreach (RaycastHit rch in target)
+        {
+            if (rch.transform.CompareTag("Target"))
+            {
+                Destroy(rch.transform.gameObject);
+            }
+        }
     }
 }
