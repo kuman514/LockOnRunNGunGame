@@ -13,10 +13,11 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     public int curMissiles { get; private set; }
     public Vector3 lockonCursorPos { get; private set; }
+    public GameObject[] lockedEnemies { get; private set; }
 
-    GameObject lockOnAimPoint;
-    PlayerDirection direction;
-    Camera cam;
+    private GameObject lockOnAimPoint;
+    private PlayerDirection direction;
+    private Camera cam;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,8 @@ public class PlayerLockOnAttack : MonoBehaviour
         SetPointDirection();
         SetLockOnCursorPos();
         LockOnDetection();
+        Fire();
+        LockedEnemyManagement();
     }
 
     void SetPointDirection()
@@ -59,5 +62,15 @@ public class PlayerLockOnAttack : MonoBehaviour
                 Destroy(rch.transform.gameObject);
             }
         }
+    }
+
+    void Fire()
+    {
+
+    }
+
+    void LockedEnemyManagement()
+    {
+
     }
 }
