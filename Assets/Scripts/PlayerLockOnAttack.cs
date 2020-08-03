@@ -13,8 +13,8 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     public int curMissiles { get; private set; }
     public Vector3 lockonCursorPos { get; private set; }
-    public GameObject[] lockedEnemies { get; private set; }
-
+    
+    private ArrayList lockedEnemies;
     private GameObject lockOnAimPoint;
     private PlayerDirection direction;
     private Camera cam;
@@ -26,6 +26,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         cam = Camera.main;
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;
+        lockedEnemies = new ArrayList();
     }
 
     // Update is called once per frame
@@ -50,7 +51,6 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void LockOnDetection()
     {
-        //Vector3 dir = new Vector3(0, 0, 1);
         Vector3 dir = new Vector3(lockonCursorPos.x, lockonCursorPos.y, cam.nearClipPlane);
         dir = lockOnAimPoint.transform.position - cam.ScreenToWorldPoint(dir);
 
@@ -59,7 +59,14 @@ public class PlayerLockOnAttack : MonoBehaviour
         {
             if (rch.transform.CompareTag("Target"))
             {
-                Destroy(rch.transform.gameObject);
+                // Lock On Method Here
+                if (lockedEnemies.Count < curMissiles)
+                {
+                    Debug.Log("Enemy Locked On");
+                    lockedEnemies.Add(rch.transform.gameObject);
+                }
+
+                //Destroy(rch.transform.gameObject);
             }
         }
     }
@@ -71,6 +78,15 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void LockedEnemyManagement()
     {
+        // Problem: Disappeared enemy locked on is still remaining.
 
+        for (int i = 0; i < lockedEnemies.Count; i++)
+        {
+            if (lockedEnemies[i] == null)
+            {
+                lockedEnemies.RemoveAt(i);
+                i--;
+            }
+        }
     }
 }
