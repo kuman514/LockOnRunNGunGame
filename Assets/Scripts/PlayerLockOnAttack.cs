@@ -14,7 +14,7 @@ public class PlayerLockOnAttack : MonoBehaviour
     public int curMissiles { get; private set; }
     public Vector3 lockonCursorPos { get; private set; }
     
-    private ArrayList lockedEnemies;
+    private List<GameObject> lockedEnemies;
     private GameObject lockOnAimPoint;
     private PlayerDirection direction;
     private Camera cam;
@@ -26,7 +26,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         cam = Camera.main;
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;
-        lockedEnemies = new ArrayList();
+        lockedEnemies = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -36,7 +36,6 @@ public class PlayerLockOnAttack : MonoBehaviour
         SetLockOnCursorPos();
         LockOnDetection();
         Fire();
-        LockedEnemyManagement();
     }
 
     void SetPointDirection()
@@ -59,14 +58,17 @@ public class PlayerLockOnAttack : MonoBehaviour
         {
             if (rch.transform.CompareTag("Target"))
             {
+                EnemyLockOnStatus els = rch.transform.GetComponent<EnemyLockOnStatus>();
+
                 // Lock On Method Here
-                if (lockedEnemies.Count < curMissiles)
+                if (lockedEnemies.Count < curMissiles && els.CheckLockable())
                 {
+                    // LockOn Sound Effect Required
+
                     Debug.Log("Enemy Locked On");
                     lockedEnemies.Add(rch.transform.gameObject);
+                    els.ResetLockOnInterval();
                 }
-
-                //Destroy(rch.transform.gameObject);
             }
         }
     }
@@ -76,17 +78,11 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     }
 
-    void LockedEnemyManagement()
+    public void RemoveLockedOnArray(GameObject disappear)
     {
-        // Problem: Disappeared enemy locked on is still remaining.
-
-        for (int i = 0; i < lockedEnemies.Count; i++)
+        while (lockedEnemies.Contains(disappear))
         {
-            if (lockedEnemies[i] == null)
-            {
-                lockedEnemies.RemoveAt(i);
-                i--;
-            }
+            lockedEnemies.Remove(disappear);
         }
     }
 }
