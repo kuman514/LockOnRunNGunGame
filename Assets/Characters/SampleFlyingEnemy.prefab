@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 8006236003030034465}
   - component: {fileID: 4908379550914501475}
   - component: {fileID: 3508429633836344273}
+  - component: {fileID: 3798739158022677184}
   m_Layer: 13
   m_Name: SampleFlyingEnemy
   m_TagString: Target
@@ -186,4 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsAfterLockedOn: 0.4
-  p1: {fileID: 0}
+--- !u!54 &3798739158022677184
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483553994367601456}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

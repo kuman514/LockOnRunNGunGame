@@ -67,7 +67,6 @@ public class PlayerLockOnAttack : MonoBehaviour
                 {
                     // LockOn Sound Effect Required
 
-                    Debug.Log("Enemy Locked On");
                     lockedEnemies.Add(rch.transform.gameObject);
                     els.ResetLockOnInterval();
                 }
@@ -81,13 +80,13 @@ public class PlayerLockOnAttack : MonoBehaviour
         {
             foreach (GameObject target in lockedEnemies)
             {
-                Debug.Log(target.ToString());
                 GameObject missile = Instantiate(missilePrefab, this.transform);
                 PlayerMissile pm = missile.transform.GetComponent<PlayerMissile>();
-                if (pm)
-                    pm.SetTarget(target);
+                pm.SetTarget(target);
                 missile.transform.SetParent(null);
             }
+
+            lockedEnemies.Clear();
         }
     }
 
@@ -98,9 +97,21 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     public void RemoveLockedOnArray(GameObject disappear)
     {
+        // Remove all lockons when the enemy disappear
+
         while (lockedEnemies.Contains(disappear))
         {
             lockedEnemies.Remove(disappear);
+        }
+    }
+
+    public void RemoveLockOn(GameObject damaged)
+    {
+        // Remove one lockon when the enemy get one hit or right after Missile Fire
+
+        if (lockedEnemies.Contains(damaged))
+        {
+            lockedEnemies.Remove(damaged);
         }
     }
 }
