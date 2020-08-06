@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMissile : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 50f;
     public float lifespan = 15f;
     public float damage = 50f;
 
@@ -27,7 +27,10 @@ public class PlayerMissile : MonoBehaviour
 
     void Turn()
     {
-
+        if (target != null)
+        {
+            transform.LookAt(target.transform.position);
+        }
     }
 
     void GoForward()

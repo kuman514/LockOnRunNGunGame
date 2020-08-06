@@ -19,6 +19,8 @@ public class PlayerLockOnAttack : MonoBehaviour
     private PlayerDirection direction;
     private Camera cam;
 
+    public GameObject missilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +77,23 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void Fire()
     {
+        if (IsFireable() && Input.GetButtonDown("Fire2"))
+        {
+            foreach (GameObject target in lockedEnemies)
+            {
+                Debug.Log(target.ToString());
+                GameObject missile = Instantiate(missilePrefab, this.transform);
+                PlayerMissile pm = missile.transform.GetComponent<PlayerMissile>();
+                if (pm)
+                    pm.SetTarget(target);
+                missile.transform.SetParent(null);
+            }
+        }
+    }
 
+    bool IsFireable()
+    {
+        return true;
     }
 
     public void RemoveLockedOnArray(GameObject disappear)
