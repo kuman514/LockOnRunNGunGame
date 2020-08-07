@@ -12,6 +12,7 @@ public class PlayerLockOnAttack : MonoBehaviour
     public float lockOnRadius = 1.5f;
 
     public int curMissiles { get; private set; }
+    public int curLockOn { get; private set; }
     public Vector3 lockonCursorPos { get; private set; }
     
     private List<GameObject> lockedEnemies;
@@ -72,6 +73,8 @@ public class PlayerLockOnAttack : MonoBehaviour
                 }
             }
         }
+
+        curLockOn = lockedEnemies.Count;
     }
 
     void Fire()

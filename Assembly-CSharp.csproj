@@ -68,12 +68,14 @@
     <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
     <Compile Include="Assets\Scripts\PlayerDirection.cs" />
     <Compile Include="Assets\Scripts\PlayerLockOnAttack.cs" />
-    <Compile Include="Assets\Scripts\PlayerLockOnUICursor.cs" />
     <Compile Include="Assets\Scripts\PlayerMissile.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerNormalAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\PlayerUIContainer.cs" />
+    <Compile Include="Assets\Scripts\PlayerUILockOnCursor.cs" />
+    <Compile Include="Assets\Scripts\PlayerUIRemainingMissles.cs" />
     <Compile Include="Assets\Scripts\SampleEnemyGenerator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/Unity2018/2019.4.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
