@@ -66,6 +66,9 @@
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyLockOnStatus.cs" />
     <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
+    <Compile Include="Assets\Scripts\ExtendMissileItem.cs" />
+    <Compile Include="Assets\Scripts\IncreaseNormalShotLevelItem.cs" />
+    <Compile Include="Assets\Scripts\ItemMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerDirection.cs" />
     <Compile Include="Assets\Scripts\PlayerLockOnAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerMissile.cs" />

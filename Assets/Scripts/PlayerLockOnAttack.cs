@@ -35,10 +35,16 @@ public class PlayerLockOnAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CountAvailableLockOnsForExtern();
         SetPointDirection();
         SetLockOnCursorPos();
         LockOnDetection();
         Fire();
+    }
+
+    void CountAvailableLockOnsForExtern()
+    {
+        curLockOn = lockedEnemies.Count;
     }
 
     void SetPointDirection()
@@ -73,8 +79,6 @@ public class PlayerLockOnAttack : MonoBehaviour
                 }
             }
         }
-
-        curLockOn = lockedEnemies.Count;
     }
 
     void Fire()
@@ -115,6 +119,14 @@ public class PlayerLockOnAttack : MonoBehaviour
         if (lockedEnemies.Contains(damaged))
         {
             lockedEnemies.Remove(damaged);
+        }
+    }
+
+    public void ExtendLockOn()
+    {
+        if (curMissiles < maxMissiles)
+        {
+            curMissiles++;
         }
     }
 }
