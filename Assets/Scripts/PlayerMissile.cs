@@ -55,7 +55,6 @@ public class PlayerMissile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Collision method here
-        Debug.Log("Enemy Hit");
         CollideWithEnemy(collision);
 
         Destroy(gameObject);
@@ -68,7 +67,6 @@ public class PlayerMissile : MonoBehaviour
             EnemyHealth eh = collision.transform.GetComponent<EnemyHealth>();
             if (eh != null)
             {
-                Debug.Log("Missile Damage");
                 eh.Damage(damage);
             }
         }

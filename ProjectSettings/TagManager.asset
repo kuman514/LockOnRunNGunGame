@@ -8,6 +8,7 @@ TagManager:
   - Target
   - PlayerProjectile
   - EnemyProjectile
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - EnemyMissile
   - Wall
   - MovingRange
-  - 
-  - 
+  - Item
+  - PlayerItemCollisionRange
   - 
   - 
   - 

@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4908379550914501475}
   - component: {fileID: 3508429633836344273}
   - component: {fileID: 3798739158022677184}
+  - component: {fileID: -2040486335010896163}
   m_Layer: 13
   m_Name: SampleFlyingEnemy
   m_TagString: Target
@@ -203,3 +204,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-2040486335010896163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483553994367601456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b64c274672cd4b8e4b7fabf7796d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItem: {fileID: 5981738894932921140, guid: 7e4e82d6a2fa8c44babd33b1a5d1d3bb,
+    type: 3}
