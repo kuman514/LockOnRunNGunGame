@@ -60,7 +60,8 @@ public class PlayerLockOnAttack : MonoBehaviour
     void LockOnDetection()
     {
         Vector3 dir = new Vector3(lockonCursorPos.x, lockonCursorPos.y, cam.nearClipPlane);
-        dir = lockOnAimPoint.transform.position - cam.ScreenToWorldPoint(dir);
+        //dir = lockOnAimPoint.transform.position - cam.ScreenToWorldPoint(dir);
+        dir = lockOnAimPoint.transform.position - cam.transform.position;
 
         RaycastHit[] target = Physics.SphereCastAll(lockOnAimPoint.transform.position, lockOnRadius, dir);
         foreach (RaycastHit rch in target)
