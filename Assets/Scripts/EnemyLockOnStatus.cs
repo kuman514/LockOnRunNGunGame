@@ -14,6 +14,7 @@ public class EnemyLockOnStatus : MonoBehaviour
     private float lockonTiming;
 
     private Camera cam;
+
     private PlayerLockOnAttack p1Lock;
     //private PlayerLockOnAttack p2Lock;
 

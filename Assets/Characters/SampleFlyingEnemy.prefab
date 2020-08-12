@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612f35551d2dd144ac8f10864cd6086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 4
   direction: {x: 1, y: 0, z: 0}
 --- !u!114 &4908379550914501475
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9db757e7575f24683949f2764c2109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
+  HP: 300
 --- !u!114 &3508429633836344273
 MonoBehaviour:
   m_ObjectHideFlags: 0

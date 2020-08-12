@@ -94,8 +94,6 @@ public class PlayerLockOnAttack : MonoBehaviour
                 pm.SetTarget(target);
                 missile.transform.SetParent(null);
             }
-
-            lockedEnemies.Clear();
         }
     }
 

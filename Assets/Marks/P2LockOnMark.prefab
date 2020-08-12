@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3298007459680760204}
   - component: {fileID: 4298426269133604120}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: MarkBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7182708637394381024}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: P2LockOnMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}

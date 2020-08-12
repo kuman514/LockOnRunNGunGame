@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
     {
         curHP -= dmg;
 
-        //p1Lock.RemoveLockOn(this.transform.gameObject);
+        p1Lock.RemoveLockOn(this.transform.gameObject);
         //p2Lock.RemoveLockOn(this.transform.gameObject);
     }
 }
