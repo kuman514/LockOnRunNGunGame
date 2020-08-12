@@ -18,6 +18,7 @@ public class PlayerLockOnAttack : MonoBehaviour
     private List<GameObject> lockedEnemies;
     private GameObject lockOnAimPoint;
     private PlayerDirection direction;
+    private PlayerUILockOnMark marker;
     private Camera cam;
 
     public GameObject missilePrefab;
@@ -30,6 +31,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;
         lockedEnemies = new List<GameObject>();
+        marker = GetComponent<PlayerUILockOnMark>();
     }
 
     // Update is called once per frame
@@ -59,9 +61,7 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void LockOnDetection()
     {
-        Vector3 dir = new Vector3(lockonCursorPos.x, lockonCursorPos.y, cam.nearClipPlane);
-        //dir = lockOnAimPoint.transform.position - cam.ScreenToWorldPoint(dir);
-        dir = lockOnAimPoint.transform.position - cam.transform.position;
+        Vector3 dir = lockOnAimPoint.transform.position - cam.transform.position;
 
         RaycastHit[] target = Physics.SphereCastAll(lockOnAimPoint.transform.position, lockOnRadius, dir);
         foreach (RaycastHit rch in target)
@@ -76,6 +76,7 @@ public class PlayerLockOnAttack : MonoBehaviour
                     // LockOn Sound Effect Required
 
                     lockedEnemies.Add(rch.transform.gameObject);
+                    CreateLockOnMark(rch.transform.gameObject);
                     els.ResetLockOnInterval();
                 }
             }
@@ -110,6 +111,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         while (lockedEnemies.Contains(disappear))
         {
             lockedEnemies.Remove(disappear);
+            RemoveLockOnMark(disappear);
         }
     }
 
@@ -120,6 +122,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         if (lockedEnemies.Contains(damaged))
         {
             lockedEnemies.Remove(damaged);
+            RemoveLockOnMark(damaged);
         }
     }
 
@@ -129,5 +132,15 @@ public class PlayerLockOnAttack : MonoBehaviour
         {
             curMissiles++;
         }
+    }
+
+    void CreateLockOnMark(GameObject create)
+    {
+        marker.CreateMark(create);
+    }
+
+    void RemoveLockOnMark(GameObject disappear)
+    {
+        marker.DeleteMark(disappear);
     }
 }

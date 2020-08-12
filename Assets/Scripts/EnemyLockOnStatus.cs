@@ -8,7 +8,9 @@ public class EnemyLockOnStatus : MonoBehaviour
 {
     public float secondsAfterLockedOn = 0.4f;
 
-    private bool isLockedOn;
+    public Vector3 uiPos { get; private set; }
+
+    //private bool isLockedOn;
     private float lockonTiming;
 
     private Camera cam;
@@ -18,8 +20,8 @@ public class EnemyLockOnStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isLockedOn = false;
-        lockonTiming = 0f;
+        //isLockedOn = false;
+        lockonTiming = secondsAfterLockedOn;
         cam = Camera.main;
 
         // get Players' Lockon system
@@ -31,21 +33,13 @@ public class EnemyLockOnStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PaintLockOn();
+        SetLockOnUIPos();
         IncreaseTiming();
     }
 
-    public void SetLockedOn()
+    void SetLockOnUIPos()
     {
-        isLockedOn = true;
-    }
-
-    void PaintLockOn()
-    {
-        if (isLockedOn)
-        {
-            Vector3 uiPos = cam.WorldToScreenPoint(transform.position);
-        }
+        uiPos = cam.WorldToScreenPoint(transform.position);
     }
 
     public bool CheckLockable()

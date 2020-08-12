@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\EnemyLockOnStatus.cs" />
     <Compile Include="Assets\Scripts\EnemyLoot.cs" />
     <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
+    <Compile Include="Assets\Scripts\EnemyUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\ExtendMissileItem.cs" />
     <Compile Include="Assets\Scripts\IncreaseNormalShotLevelItem.cs" />
     <Compile Include="Assets\Scripts\ItemCollision.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerUIContainer.cs" />
     <Compile Include="Assets\Scripts\PlayerUILockOnCursor.cs" />
+    <Compile Include="Assets\Scripts\PlayerUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\PlayerUIRemainingMissles.cs" />
     <Compile Include="Assets\Scripts\SampleEnemyGenerator.cs" />
     <Reference Include="UnityEngine">
