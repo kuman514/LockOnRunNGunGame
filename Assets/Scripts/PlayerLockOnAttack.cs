@@ -20,8 +20,11 @@ public class PlayerLockOnAttack : MonoBehaviour
     private PlayerDirection direction;
     private PlayerUILockOnMark marker;
     private Camera cam;
+    private AudioSource sfx;
 
     public GameObject missilePrefab;
+    public AudioClip missileFireSFX;
+    public AudioClip lockOnSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,7 @@ public class PlayerLockOnAttack : MonoBehaviour
         curMissiles = 4;
         lockedEnemies = new List<GameObject>();
         marker = GetComponent<PlayerUILockOnMark>();
+        sfx = cam.transform.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,10 +74,13 @@ public class PlayerLockOnAttack : MonoBehaviour
             {
                 EnemyLockOnStatus els = rch.transform.GetComponent<EnemyLockOnStatus>();
 
-                // Lock On Method Here
                 if (lockedEnemies.Count < curMissiles && els.CheckLockable())
                 {
-                    // LockOn Sound Effect Required
+                    if (lockOnSFX != null && sfx != null)
+                    {
+                        // LockOn Sound Effect
+                        sfx.PlayOneShot(lockOnSFX);
+                    }
 
                     lockedEnemies.Add(rch.transform.gameObject);
                     CreateLockOnMark(rch.transform.gameObject);
@@ -87,6 +94,11 @@ public class PlayerLockOnAttack : MonoBehaviour
     {
         if (IsFireable() && Input.GetButtonDown("Fire2"))
         {
+            if (missileFireSFX != null && sfx != null && lockedEnemies.Count > 0)
+            {
+                sfx.PlayOneShot(missileFireSFX);
+            }
+
             foreach (GameObject target in lockedEnemies)
             {
                 GameObject missile = Instantiate(missilePrefab, this.transform);
@@ -104,8 +116,6 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     public void RemoveLockedOnArray(GameObject disappear)
     {
-        // Remove all lockons when the enemy disappear
-
         while (lockedEnemies.Contains(disappear))
         {
             lockedEnemies.Remove(disappear);
@@ -115,8 +125,6 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     public void RemoveLockOn(GameObject damaged)
     {
-        // Remove one lockon when the enemy get one hit or right after Missile Fire
-
         if (lockedEnemies.Contains(damaged))
         {
             lockedEnemies.Remove(damaged);

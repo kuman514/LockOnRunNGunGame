@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerUILockOnMark : MonoBehaviour
 {
+    public int curMarks { get; private set; }
+
     private List<GameObject> markedEnemies;
     private List<GameObject> marks;
 
@@ -14,12 +16,19 @@ public class PlayerUILockOnMark : MonoBehaviour
     {
         markedEnemies = new List<GameObject>();
         marks = new List<GameObject>();
+        curMarks = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        CountCurrentMarks();
         PaintMark();
+    }
+
+    void CountCurrentMarks()
+    {
+        curMarks = marks.Count;
     }
 
     public void PaintMark()
