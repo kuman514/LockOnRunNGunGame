@@ -54,9 +54,7 @@ public class PlayerMissile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Collision method here
         CollideWithEnemy(collision);
-
         Destroy(gameObject);
     }
 
@@ -68,6 +66,13 @@ public class PlayerMissile : MonoBehaviour
             if (eh != null)
             {
                 eh.Damage(damage);
+
+                if (eh.curHP <= 0)
+                {
+                    ProjectileWhoShoot who = transform.GetComponent<ProjectileWhoShoot>();
+                    PlayerScore ps = who.who.GetComponent<PlayerScore>();
+                    ps.AddScore(100);
+                }
             }
         }
     }

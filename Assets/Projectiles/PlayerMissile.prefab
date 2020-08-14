@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 7078399287682236594}
   - component: {fileID: -5149075432192042622}
   - component: {fileID: 652600620598826645}
+  - component: {fileID: 5435684763024491655}
   m_Layer: 9
   m_Name: PlayerMissile
   m_TagString: PlayerProjectile
@@ -158,6 +159,19 @@ MonoBehaviour:
   speed: 80
   lifespan: 15
   damage: 50
+--- !u!114 &5435684763024491655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078399287682236593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75aa8103cb33df4468d434905e543170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  who: {fileID: 0}
 --- !u!1 &7078399288514396196
 GameObject:
   m_ObjectHideFlags: 0

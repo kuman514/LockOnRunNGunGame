@@ -103,7 +103,10 @@ public class PlayerLockOnAttack : MonoBehaviour
             {
                 GameObject missile = Instantiate(missilePrefab, this.transform);
                 PlayerMissile pm = missile.transform.GetComponent<PlayerMissile>();
+                ProjectileWhoShoot who = missile.transform.GetComponent<ProjectileWhoShoot>();
+
                 pm.SetTarget(target);
+                who.who = transform.gameObject;
                 missile.transform.SetParent(null);
             }
         }

@@ -66,6 +66,13 @@ public class PlayerProjectile : MonoBehaviour
             if (eh != null)
             {
                 eh.Damage(dmg);
+
+                if (eh.curHP <= 0)
+                {
+                    ProjectileWhoShoot who = transform.GetComponent<ProjectileWhoShoot>();
+                    PlayerScore ps = who.who.GetComponent<PlayerScore>();
+                    ps.AddScore(100);
+                }
             }
         }
     }

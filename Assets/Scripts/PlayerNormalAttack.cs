@@ -80,6 +80,8 @@ public class PlayerNormalAttack : MonoBehaviour
             Vector3 shootDirection = aimPoint.transform.position - collisionRange.transform.position;
             GameObject projectile = Instantiate(projectilePrefab, aimPoint.transform);
             PlayerProjectile pp = projectile.transform.gameObject.GetComponent<PlayerProjectile>();
+            ProjectileWhoShoot who = projectile.transform.GetComponent<ProjectileWhoShoot>();
+            who.who = transform.gameObject;
 
             if (shootDirection.x == 0)
             {

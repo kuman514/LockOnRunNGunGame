@@ -80,11 +80,14 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerNormalAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\PlayerScore.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerUIContainer.cs" />
     <Compile Include="Assets\Scripts\PlayerUILockOnCursor.cs" />
     <Compile Include="Assets\Scripts\PlayerUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\PlayerUIRemainingMissles.cs" />
+    <Compile Include="Assets\Scripts\PlayerUIShowScore.cs" />
+    <Compile Include="Assets\Scripts\ProjectileWhoShoot.cs" />
     <Compile Include="Assets\Scripts\SampleEnemyGenerator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

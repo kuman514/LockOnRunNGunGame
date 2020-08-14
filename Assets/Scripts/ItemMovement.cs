@@ -8,11 +8,13 @@ public class ItemMovement : MonoBehaviour
 
     private bool hasReachedToPanel;
     private Vector3 reachPoint;
+    private Vector3 reachPoint2;
 
     // Start is called before the first frame update
     void Start()
     {
         hasReachedToPanel = false;
+        reachPoint = new Vector3(0f, 2f, -0.3f);
         reachPoint = new Vector3(0f, 2f, 0f);
         CheckReachedToPanel();
     }
@@ -22,7 +24,6 @@ public class ItemMovement : MonoBehaviour
     {
         if (hasReachedToPanel)
         {
-            MoveToGamePanel();
         }
         else
         {
