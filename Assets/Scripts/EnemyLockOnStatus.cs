@@ -15,8 +15,7 @@ public class EnemyLockOnStatus : MonoBehaviour
 
     private Camera cam;
 
-    private PlayerLockOnAttack p1Lock;
-    //private PlayerLockOnAttack p2Lock;
+    GameObject[] players;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +25,7 @@ public class EnemyLockOnStatus : MonoBehaviour
         cam = Camera.main;
 
         // get Players' Lockon system
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        p1Lock = players[0].transform.GetComponent<PlayerLockOnAttack>();
-        //p2Lock = players[1].transform.GetComponent<PlayerLockOnAttack>();
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -63,7 +60,16 @@ public class EnemyLockOnStatus : MonoBehaviour
 
     private void OnDestroy()
     {
-        p1Lock.RemoveLockedOnArray(this.transform.gameObject);
-        //p2Lock.RemoveLockedOnArray(this.transform.gameObject);
+        for(int i = 0; i < players.Length; i++)
+        {
+            if (players[i] != null)
+            {
+                PlayerLockOnAttack PLOA = players[i].transform.GetComponent<PlayerLockOnAttack>();
+                if (PLOA != null)
+                {
+                    PLOA.RemoveLockedOnArray(this.transform.gameObject);
+                }
+            }
+        }
     }
 }

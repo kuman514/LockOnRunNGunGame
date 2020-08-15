@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 838558801}
   - component: {fileID: 838558800}
   - component: {fileID: 838558799}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CollisionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 965753700}
   - component: {fileID: 965753699}
   - component: {fileID: 965753698}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1900,13 +1900,13 @@ GameObject:
   - component: {fileID: 1081444569}
   - component: {fileID: 1081444572}
   - component: {fileID: 1081444573}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1081444565
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,7 +2385,7 @@ GameObject:
   - component: {fileID: 1419534404}
   - component: {fileID: 1419534403}
   - component: {fileID: 1419534402}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CollisionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
