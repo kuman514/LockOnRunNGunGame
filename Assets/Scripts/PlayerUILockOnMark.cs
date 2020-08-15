@@ -6,6 +6,8 @@ public class PlayerUILockOnMark : MonoBehaviour
 {
     public int curMarks { get; private set; }
 
+    private PlayerLockOnAttack ploa;
+
     private List<GameObject> markedEnemies;
     private List<GameObject> marks;
 
@@ -14,6 +16,7 @@ public class PlayerUILockOnMark : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ploa = transform.GetComponent<PlayerLockOnAttack>();
         markedEnemies = new List<GameObject>();
         marks = new List<GameObject>();
         curMarks = 0;
@@ -22,8 +25,20 @@ public class PlayerUILockOnMark : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TakeNullMarks();
         CountCurrentMarks();
         PaintMark();
+    }
+
+    void TakeNullMarks()
+    {
+        for (int i = 0; i < markedEnemies.Count; i++)
+        {
+            if (markedEnemies[i] == null)
+            {
+                DeleteMark(markedEnemies[i]);
+            }
+        }
     }
 
     void CountCurrentMarks()
@@ -60,5 +75,6 @@ public class PlayerUILockOnMark : MonoBehaviour
         markedEnemies.Remove(removed);
         Destroy(marks[0]);
         marks.RemoveAt(0);
+        ploa.RemoveNullLockOn(removed);
     }
 }
