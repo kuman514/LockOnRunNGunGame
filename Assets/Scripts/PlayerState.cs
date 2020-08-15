@@ -6,6 +6,8 @@ public class PlayerState : MonoBehaviour
 {
     public enum State { Ground, Airborne, Parachute }
 
+    [Range(0, 1)]
+    public int playerCode = 0;
     public State playerState { get; private set; }
 
     // Start is called before the first frame update

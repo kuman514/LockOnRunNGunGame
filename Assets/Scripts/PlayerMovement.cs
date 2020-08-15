@@ -20,12 +20,16 @@ public class PlayerMovement : MonoBehaviour
     private PlayerState playerState;
     private GameObject collisionRange;
 
+    private int pCode;
+
     void Start()
     {
         MoveDir = Vector3.zero;
         controller = GetComponent<CharacterController>();
         playerState = GetComponent<PlayerState>();
         collisionRange = transform.Find("CollisionRange").gameObject;
+
+        pCode = GetComponent<PlayerState>().playerCode;
     }
 
     void Update()
@@ -46,15 +50,15 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundMovement()
     {
-        MoveDir.x = Input.GetAxisRaw("Horizontal");
+        MoveDir.x = GameInput.GetHorizontal(pCode);
         MoveDir.x *= speed;
 
         if (controller.isGrounded)
         {
-            if (Input.GetButton("Jump"))
+            if (GameInput.GetJump(pCode))
                 MoveDir.y = jumpSpeedF;
 
-            if (Input.GetAxisRaw("Vertical") < 0)
+            if (GameInput.GetVertical(pCode) < 0)
             {
                 collisionRange.transform.localPosition = new Vector3(0, -0.25f, collisionRange.transform.localPosition.z);
                 MoveDir.x /= crouchSpeedDivisor;
@@ -75,10 +79,10 @@ public class PlayerMovement : MonoBehaviour
 
     void AirborneMovement()
     {
-        MoveDir.x = Input.GetAxisRaw("Horizontal");
+        MoveDir.x = GameInput.GetHorizontal(pCode);
         MoveDir.x *= speed;
 
-        MoveDir.y = Input.GetAxisRaw("Vertical");
+        MoveDir.y = GameInput.GetVertical(pCode);
         MoveDir.y *= speed;
 
         controller.Move(MoveDir * Time.deltaTime);
@@ -86,10 +90,10 @@ public class PlayerMovement : MonoBehaviour
 
     void ParachuteMovement()
     {
-        MoveDir.x = Input.GetAxisRaw("Horizontal");
+        MoveDir.x = GameInput.GetHorizontal(pCode);
         MoveDir.x *= speed;
 
-        MoveDir.y = Input.GetAxisRaw("Vertical");
+        MoveDir.y = GameInput.GetVertical(pCode);
         MoveDir.y *= speed;
 
         controller.Move(MoveDir * Time.deltaTime);

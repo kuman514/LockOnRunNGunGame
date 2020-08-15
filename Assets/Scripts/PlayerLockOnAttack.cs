@@ -26,6 +26,8 @@ public class PlayerLockOnAttack : MonoBehaviour
     public AudioClip missileFireSFX;
     public AudioClip lockOnSFX;
 
+    private int pCode;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class PlayerLockOnAttack : MonoBehaviour
         lockedEnemies = new List<GameObject>();
         marker = GetComponent<PlayerUILockOnMark>();
         sfx = cam.transform.GetComponent<AudioSource>();
+
+        pCode = GetComponent<PlayerState>().playerCode;
     }
 
     // Update is called once per frame
@@ -92,7 +96,7 @@ public class PlayerLockOnAttack : MonoBehaviour
 
     void Fire()
     {
-        if (IsFireable() && Input.GetButtonDown("Fire2"))
+        if (IsFireable() && GameInput.GetMissle(pCode))
         {
             if (missileFireSFX != null && sfx != null && lockedEnemies.Count > 0)
             {

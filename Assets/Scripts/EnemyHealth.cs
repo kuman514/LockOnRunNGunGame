@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float HP;
+    public int prizeScore = 100;
 
     public float curHP { get; private set; }
 
     private PlayerLockOnAttack p1Lock;
-    //private PlayerLockOnAttack p2Lock;
+    private PlayerLockOnAttack p2Lock;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
         // get Players' Lockon system
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         p1Lock = players[0].transform.GetComponent<PlayerLockOnAttack>();
-        //p2Lock = players[1].transform.GetComponent<PlayerLockOnAttack>();
+        p2Lock = players[1].transform.GetComponent<PlayerLockOnAttack>();
     }
 
     // Update is called once per frame
@@ -43,6 +44,6 @@ public class EnemyHealth : MonoBehaviour
         curHP -= dmg;
 
         p1Lock.RemoveLockOn(this.transform.gameObject);
-        //p2Lock.RemoveLockOn(this.transform.gameObject);
+        p2Lock.RemoveLockOn(this.transform.gameObject);
     }
 }

@@ -6,9 +6,6 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     [Header("Player projectile info")]
-    [Tooltip("Who fired this shot? Player 1, or Player 2?")]
-    [Range(1, 2)]
-    public int shooter = 1;
     [Tooltip("Speed of this projectile")]
     public float speed = 20f;
     [Tooltip("Projectile forwarding direction")]

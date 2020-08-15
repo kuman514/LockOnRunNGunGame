@@ -8,12 +8,15 @@ public class PlayerDirection : MonoBehaviour
     public int directionY { get; private set; }
     public int idleX { get; private set; }
 
+    private int pCode;
+
     // Start is called before the first frame update
     void Start()
     {
         directionX = 1;
         idleX = 1;
         directionY = 0;
+        pCode = transform.GetComponent<PlayerState>().playerCode;
     }
 
     // Update is called once per frame
@@ -24,10 +27,10 @@ public class PlayerDirection : MonoBehaviour
 
     void GetDirectionFromInput()
     {
-        float inputValX = Input.GetAxisRaw("Horizontal");
-        float inputValY = Input.GetAxisRaw("Vertical");
+        float inputValX = GameInput.GetHorizontal(pCode);
+        float inputValY = GameInput.GetVertical(pCode);
 
-        if(inputValX < 0)
+        if (inputValX < 0)
         {
             idleX = -1;
             directionX = -1;

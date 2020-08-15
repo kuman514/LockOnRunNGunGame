@@ -13,6 +13,8 @@ public class PlayerNormalAttack : MonoBehaviour
 
     public int curLevel { get; private set; }
 
+    private int pCode;
+
     private GameObject aimPoint;
     private GameObject collisionRange;
     private PlayerDirection direction;
@@ -25,6 +27,8 @@ public class PlayerNormalAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pCode = transform.GetComponent<PlayerState>().playerCode;
+
         aimPoint = transform.Find("NormalAimPoint").gameObject;
         collisionRange = transform.Find("CollisionRange").gameObject;
         direction = GetComponent<PlayerDirection>();
@@ -75,7 +79,7 @@ public class PlayerNormalAttack : MonoBehaviour
 
     void Fire()
     {
-        if (isFireable() && Input.GetButton("Fire1"))
+        if (isFireable() && GameInput.GetFire(pCode))
         {
             Vector3 shootDirection = aimPoint.transform.position - collisionRange.transform.position;
             GameObject projectile = Instantiate(projectilePrefab, aimPoint.transform);

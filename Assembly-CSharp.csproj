@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
     <Compile Include="Assets\Scripts\EnemyUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\ExtendMissileItem.cs" />
+    <Compile Include="Assets\Scripts\GameInput.cs" />
     <Compile Include="Assets\Scripts\IncreaseNormalShotLevelItem.cs" />
+    <Compile Include="Assets\Scripts\InputSettings.cs" />
     <Compile Include="Assets\Scripts\ItemCollision.cs" />
     <Compile Include="Assets\Scripts\ItemLifeSpan.cs" />
     <Compile Include="Assets\Scripts\ItemMovement.cs" />
