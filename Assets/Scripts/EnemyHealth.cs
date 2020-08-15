@@ -9,7 +9,8 @@ public class EnemyHealth : MonoBehaviour
 
     public float curHP { get; private set; }
 
-    private GameObject[] players;
+    private PlayerLockOnAttack p1Lock;
+    private PlayerLockOnAttack p2Lock;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class EnemyHealth : MonoBehaviour
         curHP = HP;
 
         // get Players' Lockon system
-        players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        p1Lock = players[0].transform.GetComponent<PlayerLockOnAttack>();
+        p2Lock = players[1].transform.GetComponent<PlayerLockOnAttack>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,6 @@ public class EnemyHealth : MonoBehaviour
         if (curHP <= 0)
         {
             // destroy method
-            transform.Find("Body").gameObject.SetActive(false);
 
             Destroy(gameObject);
         }
@@ -41,9 +43,7 @@ public class EnemyHealth : MonoBehaviour
     {
         curHP -= dmg;
 
-        for(int i = 0; i < players.Length; i++)
-        {
-            players[i].GetComponent<PlayerLockOnAttack>().RemoveLockedOnArray(this.transform.gameObject);
-        }
+        p1Lock.RemoveLockOn(this.transform.gameObject);
+        p2Lock.RemoveLockOn(this.transform.gameObject);
     }
 }

@@ -156,10 +156,4 @@ public class PlayerLockOnAttack : MonoBehaviour
     {
         marker.DeleteMark(disappear);
     }
-
-    public void RemoveNullLockOn(GameObject nullObject)
-    {
-        if (lockedEnemies.Contains(nullObject))
-            lockedEnemies.Remove(nullObject);
-    }
 }
