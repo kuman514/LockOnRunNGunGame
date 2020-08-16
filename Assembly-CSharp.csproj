@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\ItemMovement.cs" />
     <Compile Include="Assets\Scripts\LockOnMarkBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerDirection.cs" />
+    <Compile Include="Assets\Scripts\PlayerLifeSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerLockOnAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerMissile.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Scripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerUIContainer.cs" />
     <Compile Include="Assets\Scripts\PlayerUILockOnCursor.cs" />
-    <Compile Include="Assets\Scripts\PlayerUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\PlayerUIRemainingMissles.cs" />
     <Compile Include="Assets\Scripts\PlayerUIShowScore.cs" />
     <Compile Include="Assets\Scripts\ProjectileWhoShoot.cs" />

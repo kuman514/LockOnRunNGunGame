@@ -10,22 +10,16 @@ public class EnemyLockOnStatus : MonoBehaviour
 
     public Vector3 uiPos { get; private set; }
 
-    //private bool isLockedOn;
     private float lockonTiming;
-
     private Camera cam;
 
-    GameObject[] players;
+    private static GameObject[] players;
 
     // Start is called before the first frame update
     void Start()
     {
-        //isLockedOn = false;
         lockonTiming = secondsAfterLockedOn;
         cam = Camera.main;
-
-        // get Players' Lockon system
-        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -58,16 +52,25 @@ public class EnemyLockOnStatus : MonoBehaviour
         lockonTiming = 0f;
     }
 
+    public static void RefreshLockablePlayers()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+    }
+
     private void OnDestroy()
     {
-        for(int i = 0; i < players.Length; i++)
+        // effects
+
+        // request removal of players' lockon
+        RefreshLockablePlayers();
+        for (int i = 0; i < players.Length; i++)
         {
             if (players[i] != null)
             {
-                PlayerLockOnAttack PLOA = players[i].transform.GetComponent<PlayerLockOnAttack>();
-                if (PLOA != null)
+                PlayerLockOnAttack ploa = players[i].GetComponent<PlayerLockOnAttack>();
+                if (ploa != null)
                 {
-                    PLOA.RemoveLockedOnArray(this.transform.gameObject);
+                    ploa.RemoveLockedOnEnemyDestroyed(gameObject);
                 }
             }
         }

@@ -12,9 +12,6 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         curHP = HP;
-
-        // get Players' Lockon system
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -35,6 +32,13 @@ public class EnemyHealth : MonoBehaviour
 
     public void Damage(float dmg)
     {
+        // normal hit effect
+        curHP -= dmg;
+    }
+
+    public void MissileDamage(float dmg)
+    {
+        // missile hit effect
         curHP -= dmg;
     }
 }

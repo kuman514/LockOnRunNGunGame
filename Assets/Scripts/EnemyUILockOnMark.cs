@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyUILockOnMark : MonoBehaviour
 {
-    public float hoverDistance = 0.75f;
+    public float hoverDistance = -0.75f;
 
     // Start is called before the first frame update
     void Start()

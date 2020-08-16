@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612f35551d2dd144ac8f10864cd6086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   direction: {x: 1, y: 0, z: 0}
 --- !u!114 &4908379550914501475
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9936572e68597a14a93e4e3f78a67e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverDistance: 0.75
+  hoverDistance: -0.75
 --- !u!54 &3798739158022677184
 Rigidbody:
   m_ObjectHideFlags: 0

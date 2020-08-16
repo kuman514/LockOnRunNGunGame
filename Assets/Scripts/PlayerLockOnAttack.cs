@@ -16,14 +16,23 @@ public class PlayerLockOnAttack : MonoBehaviour
     public Vector3 lockonCursorPos { get; private set; }
     
     private List<GameObject> lockedEnemies;
+    private List<GameObject> lockOnMarks;
+
     private GameObject lockOnAimPoint;
     private PlayerDirection direction;
-    private PlayerUILockOnMark marker;
     private Camera cam;
     private AudioSource sfx;
 
+    [Header("Prefabs")]
+    [Tooltip("A mark on enemies locked on")]
+    public GameObject lockOnMark;
+    [Tooltip("Missile that goes to an enemy locked on")]
     public GameObject missilePrefab;
+
+    [Header("Sound Effects")]
+    [Tooltip("A sound clip when firing missiles")]
     public AudioClip missileFireSFX;
+    [Tooltip("A sound clip when locking on enemies")]
     public AudioClip lockOnSFX;
 
     private int pCode;
@@ -36,9 +45,8 @@ public class PlayerLockOnAttack : MonoBehaviour
         direction = GetComponent<PlayerDirection>();
         curMissiles = 4;
         lockedEnemies = new List<GameObject>();
-        marker = GetComponent<PlayerUILockOnMark>();
+        lockOnMarks = new List<GameObject>();
         sfx = cam.transform.GetComponent<AudioSource>();
-
         pCode = GetComponent<PlayerState>().playerCode;
     }
 
@@ -46,6 +54,7 @@ public class PlayerLockOnAttack : MonoBehaviour
     void Update()
     {
         CountAvailableLockOnsForExtern();
+        MarkManagement();
         SetPointDirection();
         SetLockOnCursorPos();
         LockOnDetection();
@@ -55,6 +64,14 @@ public class PlayerLockOnAttack : MonoBehaviour
     void CountAvailableLockOnsForExtern()
     {
         curLockOn = lockedEnemies.Count;
+    }
+
+    void MarkManagement()
+    {
+        while (lockOnMarks.Count > curLockOn)
+        {
+            RemoveLockOnMark();
+        }
     }
 
     void SetPointDirection()
@@ -86,8 +103,12 @@ public class PlayerLockOnAttack : MonoBehaviour
                         sfx.PlayOneShot(lockOnSFX);
                     }
 
+                    // Add the enemy locked on to array
                     lockedEnemies.Add(rch.transform.gameObject);
-                    CreateLockOnMark(rch.transform.gameObject);
+
+                    // Make a lockon mark
+                    MakeLockOnMark(rch.transform.gameObject);
+
                     els.ResetLockOnInterval();
                 }
             }
@@ -113,6 +134,8 @@ public class PlayerLockOnAttack : MonoBehaviour
                 who.who = transform.gameObject;
                 missile.transform.SetParent(null);
             }
+
+            lockedEnemies.Clear();
         }
     }
 
@@ -121,24 +144,21 @@ public class PlayerLockOnAttack : MonoBehaviour
         return true;
     }
 
-    public void RemoveLockedOnArray(GameObject disappear)
+    void MakeLockOnMark(GameObject target)
     {
-        while (lockedEnemies.Contains(disappear))
-        {
-            lockedEnemies.Remove(disappear);
-            RemoveLockOnMark(disappear);
-        }
+        GameObject mark = Instantiate(lockOnMark, target.transform);
+        mark.transform.SetParent(target.transform);
+        mark.transform.localPosition = new Vector3(0, 0, target.GetComponent<EnemyUILockOnMark>().hoverDistance);
+        lockOnMarks.Add(mark);
     }
 
-    public void RemoveLockOn(GameObject damaged)
+    void RemoveLockOnMark()
     {
-        if (lockedEnemies.Contains(damaged))
-        {
-            lockedEnemies.Remove(damaged);
-            RemoveLockOnMark(damaged);
-        }
+        Destroy(lockOnMarks[0]);
+        lockOnMarks.RemoveAt(0);
     }
 
+    // For Items Only
     public void ExtendLockOn()
     {
         if (curMissiles < maxMissiles)
@@ -147,13 +167,12 @@ public class PlayerLockOnAttack : MonoBehaviour
         }
     }
 
-    void CreateLockOnMark(GameObject create)
+    // For Enemy Modules Only
+    public void RemoveLockedOnEnemyDestroyed(GameObject destroyed)
     {
-        marker.CreateMark(create);
-    }
-
-    void RemoveLockOnMark(GameObject disappear)
-    {
-        marker.DeleteMark(disappear);
+        while (lockedEnemies.Contains(destroyed))
+        {
+            lockedEnemies.Remove(destroyed);
+        }
     }
 }

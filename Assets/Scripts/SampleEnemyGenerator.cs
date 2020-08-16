@@ -27,7 +27,7 @@ public class SampleEnemyGenerator : MonoBehaviour
         while(true)
         {
             originalPos = startPoint.localPosition;
-            startPoint.localPosition = new Vector3(startPoint.localPosition.x, startPoint.localPosition.y + Random.Range(0f, 10f), startPoint.localPosition.z + Random.Range(-1f, 1f));
+            startPoint.localPosition = new Vector3(startPoint.localPosition.x, startPoint.localPosition.y + Random.Range(2f, 10f), startPoint.localPosition.z + Random.Range(-2f, 1f));
             GameObject flyingEnemy = Instantiate(testEnemyPrefab, startPoint);
             startPoint.localPosition = originalPos;
 

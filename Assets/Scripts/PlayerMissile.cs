@@ -58,12 +58,6 @@ public class PlayerMissile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        CollideWithEnemy(collision);
-        Destroy(gameObject);
-    }
-
     private void CollideWithEnemy(Collision collision)
     {
         if (collision.transform.CompareTag("Target"))
@@ -71,31 +65,13 @@ public class PlayerMissile : MonoBehaviour
             EnemyHealth eh = collision.transform.GetComponent<EnemyHealth>();
             if (eh != null)
             {
-                eh.Damage(damage);
+                eh.MissileDamage(damage);
 
                 if (eh.curHP <= 0)
                 {
                     ProjectileWhoShoot who = transform.GetComponent<ProjectileWhoShoot>();
                     PlayerScore ps = who.who.GetComponent<PlayerScore>();
-                    ps.AddScore(100);
-                }
-            }
-        }
-    }
 
-    private void CollideWithEnemy(Collider collision)
-    {
-        if (collision.transform.CompareTag("Target"))
-        {
-            EnemyHealth eh = collision.transform.GetComponent<EnemyHealth>();
-            if (eh != null)
-            {
-                eh.Damage(damage);
-
-                if (eh.curHP <= 0)
-                {
-                    ProjectileWhoShoot who = transform.GetComponent<ProjectileWhoShoot>();
-                    PlayerScore ps = who.who.GetComponent<PlayerScore>();
                     ps.AddScore(100);
                 }
             }
