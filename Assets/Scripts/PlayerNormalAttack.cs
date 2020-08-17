@@ -7,9 +7,18 @@ public class PlayerNormalAttack : MonoBehaviour
     [Header("Shot Specification")]
     [Tooltip("Maximum level of normal shots")]
     public int maxLevel = 4;
+    [Tooltip("Normal Shot Rapidity")]
     public float roundsPerSecond = 10f;
-    public GameObject projectilePrefab;
+    [Tooltip("Direction of normal shots")]
     public float[] shotDirections;
+
+    [Header("Prefabs")]
+    [Tooltip("Projectile of normal shots")]
+    public GameObject projectilePrefab;
+
+    [Header("Sound Effects")]
+    [Tooltip("Sound clip of normal shots")]
+    public AudioClip normalShotSFX;
 
     public int curLevel { get; private set; }
 
@@ -19,6 +28,8 @@ public class PlayerNormalAttack : MonoBehaviour
     private GameObject collisionRange;
     private PlayerDirection direction;
     private CharacterController controller;
+    private Camera cam;
+    private AudioSource sfx;
 
     private int shotSeq;
     private float secondsPerRound;
@@ -33,6 +44,8 @@ public class PlayerNormalAttack : MonoBehaviour
         collisionRange = transform.Find("CollisionRange").gameObject;
         direction = GetComponent<PlayerDirection>();
         controller = GetComponent<CharacterController>();
+        cam = Camera.main;
+        sfx = cam.transform.GetComponent<AudioSource>();
 
         curLevel = 1;
         shotSeq = 0;
@@ -100,6 +113,12 @@ public class PlayerNormalAttack : MonoBehaviour
             shotSeq = shotSeq % shotDirections.Length;
 
             pp.direction = shootDirection.normalized;
+
+            if (normalShotSFX != null && sfx != null)
+            {
+                // LockOn Sound Effect
+                sfx.PlayOneShot(normalShotSFX);
+            }
 
             projectile.transform.SetParent(null);
             fireTimer = 0f;

@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyLockOnStatus.cs" />
     <Compile Include="Assets\Scripts\EnemyLoot.cs" />
+    <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
     <Compile Include="Assets\Scripts\EnemySampleFlying.cs" />
     <Compile Include="Assets\Scripts\EnemyUILockOnMark.cs" />
     <Compile Include="Assets\Scripts\ExtendMissileItem.cs" />
