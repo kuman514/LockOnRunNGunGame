@@ -63,7 +63,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e4182de532b2c4ba49f5236073eeaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shooter: 1
   speed: 50
   direction: {x: 0, y: 0, z: 0}
   lifetime: 1
@@ -188,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 8230305888581088187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2835993158931383696}
   m_RootOrder: 1

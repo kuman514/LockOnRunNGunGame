@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\PlayerScore.cs" />
     <Compile Include="Assets\Scripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerUIContainer.cs" />
+    <Compile Include="Assets\Scripts\PlayerUILife.cs" />
     <Compile Include="Assets\Scripts\PlayerUILockOnCursor.cs" />
     <Compile Include="Assets\Scripts\PlayerUIRemainingMissles.cs" />
     <Compile Include="Assets\Scripts\PlayerUIShowScore.cs" />

@@ -22,8 +22,6 @@ public class ItemCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Item Collision");
-
         if (collision.transform.CompareTag("Player"))
         {
             switch (type)

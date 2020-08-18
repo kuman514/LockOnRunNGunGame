@@ -28,6 +28,14 @@ public class PlayerUILockOnCursor : MonoBehaviour
 
     void SetUIPosition()
     {
-        rt.position = ploa.lockonCursorPos;
+        if (player.activeSelf == false)
+        {
+            rt.transform.gameObject.SetActive(false);
+        }
+        else
+        {
+            rt.transform.gameObject.SetActive(true);
+            rt.position = ploa.lockonCursorPos;
+        }
     }
 }
