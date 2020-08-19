@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\PlayerUIShowScore.cs" />
     <Compile Include="Assets\Scripts\ProjectileWhoShoot.cs" />
     <Compile Include="Assets\Scripts\SampleEnemyGenerator.cs" />
+    <Compile Include="Assets\Scripts\UIContinue.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

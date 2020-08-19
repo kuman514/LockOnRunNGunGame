@@ -2508,6 +2508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615377700}
   - component: {fileID: 1615377701}
+  - component: {fileID: 1615377702}
   m_Layer: 0
   m_Name: GamePanel
   m_TagString: Untagged
@@ -2548,10 +2549,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1: {fileID: 1081444564}
   P2: {fileID: 965753696}
-  totalLife: 3
-  respawnInterval: 1.5
+  totalLife: 1
+  respawnInterval: 0.8
   P1AtStart: 0
-  P2AtStart: 1
+  P2AtStart: 0
+--- !u!114 &1615377702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615377699}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d0b63252529034a98732a8dd0a831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueCount: 20
 --- !u!1 &1648073543
 GameObject:
   m_ObjectHideFlags: 0
