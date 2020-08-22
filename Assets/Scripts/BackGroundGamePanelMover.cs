@@ -9,13 +9,11 @@ public class BackGroundGamePanelMover : MonoBehaviour
     public float reachMagnitude = 0.2f;
 
     private int dest;
-    private GameObject panel;
 
     // Start is called before the first frame update
     void Start()
     {
         dest = 0;
-        panel = GameObject.Find("GamePanel");
 
         GetPattern();
     }
@@ -38,7 +36,7 @@ public class BackGroundGamePanelMover : MonoBehaviour
 
     void Propagation()
     {
-        if((points[dest] - panel.transform.position).magnitude > reachMagnitude)
+        if((points[dest] - transform.position).magnitude > reachMagnitude)
         {
             MoveToPoint(points[dest]);
         }
@@ -51,6 +49,6 @@ public class BackGroundGamePanelMover : MonoBehaviour
 
     void MoveToPoint(Vector3 destination)
     {
-        panel.transform.Translate((destination - panel.transform.position).normalized * speed * Time.deltaTime);
+        transform.Translate((destination - transform.position).normalized * speed * Time.deltaTime);
     }
 }
