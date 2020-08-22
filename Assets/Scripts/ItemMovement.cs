@@ -8,14 +8,14 @@ public class ItemMovement : MonoBehaviour
 
     private bool hasReachedToPanel;
     private Vector3 reachPoint;
-    private Vector3 reachPoint2;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         hasReachedToPanel = false;
         reachPoint = new Vector3(0f, 2f, -0.3f);
-        reachPoint = new Vector3(0f, 2f, 0f);
+        rb = transform.GetComponent<Rigidbody>();
         CheckReachedToPanel();
     }
 
@@ -39,9 +39,12 @@ public class ItemMovement : MonoBehaviour
 
     void CheckReachedToPanel()
     {
-        if (-0.1f < transform.localPosition.z && transform.localPosition.z < 0.1f)
+        if (-0.5f < transform.localPosition.z && transform.localPosition.z < 0.5f)
         {
             hasReachedToPanel = true;
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationZ |
+                             RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
         }
     }
 }
