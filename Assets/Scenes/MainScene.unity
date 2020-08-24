@@ -1114,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &833826931
 Transform:
   m_ObjectHideFlags: 0
@@ -2146,12 +2146,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundBehaviors:
   - behaviorCode: 0
-    SequenceSpeed: 4
-    MoveDestination: {x: 30, y: 0, z: 15}
+    SequenceSpeed: 7
+    MoveDestination: {x: -30, y: 20, z: 13}
+    SequenceSpan: 0
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 0}
     SpawnPosition: {x: 0, y: 0, z: 0}
-    ObjectsToDestroy: {fileID: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 0}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+  - behaviorCode: 1
+    SequenceSpeed: 0
+    MoveDestination: {x: 0, y: 0, z: 0}
+    SequenceSpan: 3
+    RotationDegree: {x: 10, y: 0, z: 10}
+    ObjectToSpawn: {fileID: 0}
+    SpawnPosition: {x: 0, y: 0, z: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
@@ -2162,10 +2180,29 @@ MonoBehaviour:
   - behaviorCode: 0
     SequenceSpeed: 7
     MoveDestination: {x: -30, y: 20, z: 13}
+    SequenceSpan: 0
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 0}
     SpawnPosition: {x: 0, y: 0, z: 0}
-    ObjectsToDestroy: {fileID: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 0}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+  - behaviorCode: 3
+    SequenceSpeed: 0
+    MoveDestination: {x: 0, y: 0, z: 0}
+    SequenceSpan: 0
+    RotationDegree: {x: 0, y: 0, z: 0}
+    ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
+      type: 3}
+    SpawnPosition: {x: -12, y: 3, z: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
@@ -2176,10 +2213,29 @@ MonoBehaviour:
   - behaviorCode: 0
     SequenceSpeed: 10
     MoveDestination: {x: -5, y: 0, z: 16}
+    SequenceSpan: 0
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 0}
     SpawnPosition: {x: 0, y: 0, z: 0}
-    ObjectsToDestroy: {fileID: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 0}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+  - behaviorCode: 3
+    SequenceSpeed: 0
+    MoveDestination: {x: 0, y: 0, z: 0}
+    SequenceSpan: 0
+    RotationDegree: {x: 0, y: 0, z: 0}
+    ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
+      type: 3}
+    SpawnPosition: {x: -12, y: 7, z: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0

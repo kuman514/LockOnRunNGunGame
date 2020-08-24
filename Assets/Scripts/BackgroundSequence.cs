@@ -9,11 +9,13 @@ public class BackgroundSequence : MonoBehaviour
     public bool loop;
 
     private int bgbIndex;
+    private float rotationTimer;
 
     // Start is called before the first frame update
     void Start()
     {
         bgbIndex = 0;
+        rotationTimer = 0f;
     }
 
     // Update is called once per frame
@@ -56,7 +58,7 @@ public class BackgroundSequence : MonoBehaviour
     {
         if ((backgroundBehaviors[bgbIndex].MoveDestination - transform.position).magnitude <= reachMagnitude)
         {
-            bgbIndex++;
+            ProceedToNext();
         }
         else
         {
@@ -66,30 +68,59 @@ public class BackgroundSequence : MonoBehaviour
 
     void Rotate()
     {
-
+        if (rotationTimer >= backgroundBehaviors[bgbIndex].SequenceSpan)
+        {
+            ProceedToNext();
+        }
+        else
+        {
+            transform.Rotate(backgroundBehaviors[bgbIndex].RotationDegree * (1 / backgroundBehaviors[bgbIndex].SequenceSpan) * Time.deltaTime);
+            rotationTimer += Time.deltaTime;
+        }
     }
+
     void MoveAndRotate()
     {
-
+        ProceedToNext();
     }
 
     void Spawn()
     {
+        if (backgroundBehaviors[bgbIndex].ObjectToSpawn != null)
+        {
+            Instantiate(backgroundBehaviors[bgbIndex].ObjectToSpawn,
+                        backgroundBehaviors[bgbIndex].SpawnPosition,
+                        backgroundBehaviors[bgbIndex].SpawnRotation);
+        }
 
+        ProceedToNext();
     }
 
     void Destroy()
     {
+        if (backgroundBehaviors[bgbIndex].ObjectToDestroy != null)
+        {
+            // effect
 
+            Destroy(backgroundBehaviors[bgbIndex].ObjectToDestroy);
+        }
+
+        ProceedToNext();
     }
 
     void Condition()
     {
-
+        ProceedToNext();
     }
 
     void ChangeBGM()
     {
+        ProceedToNext();
+    }
 
+    void ProceedToNext()
+    {
+        bgbIndex++;
+        rotationTimer = 0f;
     }
 }
