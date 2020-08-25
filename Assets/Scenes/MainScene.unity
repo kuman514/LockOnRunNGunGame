@@ -2145,43 +2145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundBehaviors:
-  - behaviorCode: 0
-    SequenceSpeed: 7
-    MoveDestination: {x: -30, y: 20, z: 13}
-    SequenceSpan: 0
-    RotationDegree: {x: 0, y: 0, z: 0}
-    ObjectToSpawn: {fileID: 0}
-    SpawnPosition: {x: 0, y: 0, z: 0}
-    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
-    ObjectToDestroy: {fileID: 0}
-    DestructionEffect: {fileID: 0}
-    DestroyToProceed: {fileID: 0}
-    IsDestroyed: 0
-    LoopsWhileObjectAlive: {fileID: 0}
-    LoopDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
-    BGMToChange: {fileID: 0}
-  - behaviorCode: 1
-    SequenceSpeed: 0
-    MoveDestination: {x: 0, y: 0, z: 0}
+  - behaviorCode: 2
     SequenceSpan: 3
-    RotationDegree: {x: 10, y: 0, z: 10}
-    ObjectToSpawn: {fileID: 0}
-    SpawnPosition: {x: 0, y: 0, z: 0}
-    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
-    ObjectToDestroy: {fileID: 0}
-    DestructionEffect: {fileID: 0}
-    DestroyToProceed: {fileID: 0}
-    IsDestroyed: 0
-    LoopsWhileObjectAlive: {fileID: 0}
-    LoopDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
-    BGMToChange: {fileID: 0}
-  - behaviorCode: 0
-    SequenceSpeed: 7
-    MoveDestination: {x: -30, y: 20, z: 13}
-    SequenceSpan: 0
-    RotationDegree: {x: 0, y: 0, z: 0}
+    MoveDifference: {x: 0, y: -15, z: 0}
+    RotationDegree: {x: 0, y: 30, z: 0}
     ObjectToSpawn: {fileID: 0}
     SpawnPosition: {x: 0, y: 0, z: 0}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -2194,13 +2161,12 @@ MonoBehaviour:
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
   - behaviorCode: 3
-    SequenceSpeed: 0
-    MoveDestination: {x: 0, y: 0, z: 0}
     SequenceSpan: 0
+    MoveDifference: {x: 0, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
       type: 3}
-    SpawnPosition: {x: -12, y: 3, z: 0}
+    SpawnPosition: {x: 0, y: 5, z: 5}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
     ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
@@ -2210,11 +2176,10 @@ MonoBehaviour:
     LoopDirection: {x: 0, y: 0, z: 0}
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
-  - behaviorCode: 0
-    SequenceSpeed: 10
-    MoveDestination: {x: -5, y: 0, z: 16}
-    SequenceSpan: 0
-    RotationDegree: {x: 0, y: 0, z: 0}
+  - behaviorCode: 2
+    SequenceSpan: 3
+    MoveDifference: {x: 0, y: 15, z: 0}
+    RotationDegree: {x: 0, y: 30, z: 0}
     ObjectToSpawn: {fileID: 0}
     SpawnPosition: {x: 0, y: 0, z: 0}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -2227,13 +2192,12 @@ MonoBehaviour:
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
   - behaviorCode: 3
-    SequenceSpeed: 0
-    MoveDestination: {x: 0, y: 0, z: 0}
     SequenceSpan: 0
+    MoveDifference: {x: 0, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
       type: 3}
-    SpawnPosition: {x: -12, y: 7, z: 0}
+    SpawnPosition: {x: -5, y: 3, z: -3}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
     ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
@@ -3631,17 +3595,17 @@ PrefabInstance:
     - target: {fileID: 5437379374275428520, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379374275428520, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379374275428520, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379374275428521, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3656,32 +3620,32 @@ PrefabInstance:
     - target: {fileID: 5437379374290972619, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379374290972619, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379374290972619, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375185580170, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375185580170, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375185580170, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375185580171, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3691,17 +3655,17 @@ PrefabInstance:
     - target: {fileID: 5437379375438256136, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375438256136, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375438256136, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375438256137, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3716,17 +3680,17 @@ PrefabInstance:
     - target: {fileID: 5437379375473737863, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375473737863, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375473737863, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375841632322, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3796,17 +3760,17 @@ PrefabInstance:
     - target: {fileID: 5437379375905745960, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375905745960, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375905745960, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379375905745961, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3816,17 +3780,17 @@ PrefabInstance:
     - target: {fileID: 5437379376042832844, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376042832844, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376042832844, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376042832845, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3836,17 +3800,17 @@ PrefabInstance:
     - target: {fileID: 5437379376186784592, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376186784592, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376186784592, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376186784593, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
@@ -3861,17 +3825,17 @@ PrefabInstance:
     - target: {fileID: 5437379376294540455, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376294540455, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5437379376294540455, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5676762816414206686, guid: 67af4abe33226214a9264cfa0698aa67,
         type: 3}

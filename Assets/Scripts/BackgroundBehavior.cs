@@ -6,18 +6,14 @@ using UnityEngine;
 [System.Serializable]
 public struct BackgroundBehavior
 {
-    public enum BehaviorCode { Move, Rotate, MoveAndRotate, Spawn, Destroy, Condition, ChangeBGM }
+    public enum BehaviorCode { MoveAndRotate, Spawn, Destroy, Condition, ChangeBGM }
 
     public BehaviorCode behaviorCode;
 
-    // Only for Move
-    [Header("Move Option")]
-    public float SequenceSpeed;
-    public Vector3 MoveDestination;
-
-    // Only for Rotate
-    [Header("Rotate Option")]
+    // Only for Move & Rotate
+    [Header("Move & Rotate Option")]
     public float SequenceSpan;
+    public Vector3 MoveDifference;
     public Vector3 RotationDegree;
 
     // Only for Spawn
@@ -36,7 +32,7 @@ public struct BackgroundBehavior
     public GameObject DestroyToProceed;
     public bool IsDestroyed;
     public GameObject LoopsWhileObjectAlive;
-    public Vector3 LoopDirection;
+    public Vector3 LoopMoveDirection;
     public float LoopSpeed;
 
     // Only for ChangeBGM
