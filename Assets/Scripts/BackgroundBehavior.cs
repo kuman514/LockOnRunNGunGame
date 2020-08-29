@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public struct BackgroundBehavior
 {
-    public enum BehaviorCode { MoveAndRotate, Spawn, Destroy, Condition, ChangeBGM }
+    public enum BehaviorCode { MoveAndRotate, LerpMoveAndRotate, Spawn, Destroy, Condition, ChangeBGM }
 
     public BehaviorCode behaviorCode;
 

@@ -28,6 +28,9 @@ public class BackgroundSequence : MonoBehaviour
                 case BackgroundBehavior.BehaviorCode.MoveAndRotate:
                     MoveAndRotate();
                     break;
+                case BackgroundBehavior.BehaviorCode.LerpMoveAndRotate:
+                    LerpMoveAndRotate();
+                    break;
                 case BackgroundBehavior.BehaviorCode.Spawn:
                     Spawn();
                     break;
@@ -70,6 +73,33 @@ public class BackgroundSequence : MonoBehaviour
             {
                 Move();
                 Rotate();
+                movrotTimer += Time.deltaTime;
+            }
+        }
+    }
+
+    void LerpMove()
+    {
+        transform.Translate(backgroundBehaviors[bgbIndex].MoveDifference * (1 / backgroundBehaviors[bgbIndex].SequenceSpan) * Time.deltaTime);
+    }
+
+    void LerpRotate()
+    {
+        transform.Rotate(backgroundBehaviors[bgbIndex].RotationDegree * (1 / backgroundBehaviors[bgbIndex].SequenceSpan) * Time.deltaTime);
+    }
+
+    void LerpMoveAndRotate()
+    {
+        if (movrotTimer >= backgroundBehaviors[bgbIndex].SequenceSpan)
+        {
+            ProceedToNext();
+        }
+        else
+        {
+            if (movrotTimer < backgroundBehaviors[bgbIndex].SequenceSpan)
+            {
+                LerpMove();
+                LerpRotate();
                 movrotTimer += Time.deltaTime;
             }
         }
