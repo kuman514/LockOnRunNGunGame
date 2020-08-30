@@ -17,6 +17,7 @@ public class EnemyBehavior
 
     // Only for Shoot
     [Header("Shoot Option")]
+    public GameObject Projectile;
     public float ProjectileSpeed;
     public Vector3 ShotDirection;
     public GameObject ShootTo;

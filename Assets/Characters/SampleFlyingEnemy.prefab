@@ -217,10 +217,23 @@ MonoBehaviour:
   enemyBehaviors:
   - behaviorCode: 0
     SequenceSpan: 4
-    MoveDifference: {x: 30, y: 0, z: 0}
+    MoveDifference: {x: 20, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
+    Projectile: {fileID: 0}
     ProjectileSpeed: 0
     ShotDirection: {x: 0, y: 0, z: 0}
+    ShootTo: {fileID: 0}
+    LookAt: {fileID: 0}
+    DestroyEffect: {fileID: 0}
+    BackTo: 0
+  - behaviorCode: 2
+    SequenceSpan: 0
+    MoveDifference: {x: 0, y: 0, z: 0}
+    RotationDegree: {x: 0, y: 0, z: 0}
+    Projectile: {fileID: 1898775760669700909, guid: f003f1a3536bcda49a76011f4b5aa3d4,
+      type: 3}
+    ProjectileSpeed: -10
+    ShotDirection: {x: 0, y: 0, z: 1}
     ShootTo: {fileID: 0}
     LookAt: {fileID: 0}
     DestroyEffect: {fileID: 0}
@@ -229,6 +242,7 @@ MonoBehaviour:
     SequenceSpan: 4
     MoveDifference: {x: -15, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
+    Projectile: {fileID: 0}
     ProjectileSpeed: 0
     ShotDirection: {x: 0, y: 0, z: 0}
     ShootTo: {fileID: 0}

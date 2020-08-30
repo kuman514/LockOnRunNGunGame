@@ -111,7 +111,27 @@ public class EnemySequence : MonoBehaviour
 
     void Shoot()
     {
+        if (enemyBehaviors[enbIndex].Projectile != null)
+        {
+            Debug.Log("shoot");
 
+            GameObject prj = Instantiate(enemyBehaviors[enbIndex].Projectile, transform);
+            EnemyProjectile ep = prj.transform.GetComponent<EnemyProjectile>();
+
+            if (enemyBehaviors[enbIndex].ShootTo != null)
+            {
+                prj.transform.LookAt(enemyBehaviors[enbIndex].ShootTo.transform);
+            }
+            else
+            {
+                ep.direction = enemyBehaviors[enbIndex].ShotDirection;
+            }
+
+            ep.speed = enemyBehaviors[enbIndex].ProjectileSpeed;
+            prj.transform.SetParent(null);
+        }
+
+        ProceedToNext();
     }
 
     void LookPlayer()

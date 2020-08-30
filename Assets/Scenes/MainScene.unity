@@ -2181,7 +2181,7 @@ MonoBehaviour:
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
       type: 3}
-    SpawnPosition: {x: -5, y: 3, z: 10}
+    SpawnPosition: {x: -10, y: 3, z: 10}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
     ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
