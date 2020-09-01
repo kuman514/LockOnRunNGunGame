@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 58
+  controlID: 126
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,9 +395,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: be380000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 60fbffff
+      m_SelectedIDs: 22380000
+      m_LastClickedID: 14370
+      m_ExpandedIDs: 60fbffff64380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 5, z: 18.75}
+    m_Target: {x: -6.909545, y: 16.825365, z: 53.379448}
     speed: 2
-    m_Value: {x: 0, y: 5, z: 18.75}
+    m_Value: {x: -6.909545, y: 16.825365, z: 53.379448}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -505,13 +505,13 @@ MonoBehaviour:
     m_GridAxis: 2
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.040753596, y: 0.048255455, z: -0.0019234632, w: 0.99804276}
+    m_Target: {x: -0.044644233, y: -0.040142264, z: -0.0017482738, w: 0.9982362}
     speed: 2
-    m_Value: {x: 0.040751915, y: 0.048253465, z: -0.0019233839, w: 0.9980016}
+    m_Value: {x: -0.04464238, y: -0.0401406, z: -0.0017482013, w: 0.99819475}
   m_Size:
-    m_Target: 42.401073
+    m_Target: 28.016071
     speed: 2
-    m_Value: 42.401073
+    m_Value: 28.016071
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,34 +601,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Characters
+    - Assets/Projectiles
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Characters
+  - Assets/Projectiles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\LockOnRunNGunGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f03a0000
-    m_LastClickedID: 15088
+    m_SelectedIDs: fa3a0000
+    m_LastClickedID: 15098
     m_ExpandedIDs: 00000000e63a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Marks
-      m_OriginalName: Marks
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15092
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -761,7 +761,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 180
+  m_LastVerticalScrollValue: 0
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

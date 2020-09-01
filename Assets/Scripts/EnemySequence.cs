@@ -136,12 +136,15 @@ public class EnemySequence : MonoBehaviour
 
     void LookPlayer()
     {
-
+        if (enemyBehaviors[enbIndex].LookAt != null)
+        {
+            transform.LookAt(enemyBehaviors[enbIndex].LookAt.transform);
+        }
     }
 
     void Loop()
     {
-
+        enbIndex = enemyBehaviors[enbIndex].BackTo;
     }
 
     void End()

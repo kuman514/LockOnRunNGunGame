@@ -275,7 +275,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 4e-45, z: 1.532e-42, w: 5.9e-44}
+  m_BoundingSphereOverride: {x: 0, y: 1.7314e-41, z: 0, w: 0.0000000015861588}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1513,7 +1513,7 @@ Transform:
   - {fileID: 946395351}
   - {fileID: 1862103252}
   m_Father: {fileID: 1615377700}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965753698
 MonoBehaviour:
@@ -1902,7 +1902,7 @@ Transform:
   - {fileID: 256725691}
   - {fileID: 2060329148}
   m_Father: {fileID: 1615377700}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1081444566
 CharacterController:
@@ -2181,7 +2181,7 @@ MonoBehaviour:
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 483553994367601456, guid: dd267118de300314391712808722ae52,
       type: 3}
-    SpawnPosition: {x: -10, y: 3, z: 10}
+    SpawnPosition: {x: 0, y: 3, z: 10}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
     ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
@@ -2191,7 +2191,7 @@ MonoBehaviour:
     LoopMoveDirection: {x: 0, y: 0, z: 0}
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
-  reachMagnitude: 1
+  reachMagnitude: 0.07
   loop: 1
 --- !u!1 &1281362203
 GameObject:
@@ -2622,7 +2622,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1615377700}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535776171
 GameObject:
@@ -2806,9 +2806,9 @@ Transform:
   m_Children:
   - {fileID: 260130870}
   - {fileID: 534669905}
+  - {fileID: 1443688424}
   - {fileID: 1081444565}
   - {fileID: 965753697}
-  - {fileID: 1443688424}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
