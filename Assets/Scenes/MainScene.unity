@@ -1566,7 +1566,7 @@ MonoBehaviour:
   - 0.02
   - 0
   - -0.02
-  projectilePrefab: {fileID: 2835993158931383699, guid: 0a4c9ca435a9ab34cae50b4ec0716d35,
+  projectilePrefab: {fileID: 2835993158931383699, guid: 33439e07fab37bf4a813310815efb0b3,
     type: 3}
   normalShotSFX: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
 --- !u!114 &965753702
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   - 0.02
   - 0
   - -0.02
-  projectilePrefab: {fileID: 2835993158931383699, guid: 0a4c9ca435a9ab34cae50b4ec0716d35,
+  projectilePrefab: {fileID: 2835993158931383699, guid: 83181b13dee144c4387cff1a1464803e,
     type: 3}
   normalShotSFX: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
 --- !u!114 &1081444573
