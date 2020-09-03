@@ -28,6 +28,6 @@ public class PlayerUIRemainingMissles : MonoBehaviour
 
     void CountRemainingMissiles()
     {
-        remainingMissiles.text = ploa.curLockOn + " / " + ploa.curMissiles;
+        remainingMissiles.text = ploa.curLockOn + "/" + ploa.curMissiles;
     }
 }

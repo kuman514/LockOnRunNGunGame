@@ -35,7 +35,7 @@ public class PlayerUILife : MonoBehaviour
             }
             else
             {
-                lifeText.text = "Left " + pls.P1Left;
+                lifeText.text = "LEFT " + pls.P1Left;
             }
         }
 
@@ -47,7 +47,7 @@ public class PlayerUILife : MonoBehaviour
             }
             else
             {
-                lifeText.text = "Left " + pls.P2Left;
+                lifeText.text = "LEFT " + pls.P2Left;
             }
         }
     }

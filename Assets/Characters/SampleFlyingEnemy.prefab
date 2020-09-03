@@ -103,11 +103,11 @@ GameObject:
   m_Component:
   - component: {fileID: 483553994367601457}
   - component: {fileID: 483553994367601458}
+  - component: {fileID: 921838320653524341}
   - component: {fileID: 4908379550914501475}
   - component: {fileID: 3508429633836344273}
   - component: {fileID: -2634785356123359899}
   - component: {fileID: -2040486335010896163}
-  - component: {fileID: 921838320653524341}
   - component: {fileID: 3798739158022677184}
   m_Layer: 13
   m_Name: SampleFlyingEnemy
@@ -149,6 +149,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &921838320653524341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483553994367601456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a2a4fbcaeddc14c8458b953709c9bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBehaviors: []
+  reachMagnitude: 0.03
+  loop: 0
 --- !u!114 &4908379550914501475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,55 +217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootItem: {fileID: 5981738894932921140, guid: 7e4e82d6a2fa8c44babd33b1a5d1d3bb,
     type: 3}
---- !u!114 &921838320653524341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483553994367601456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a2a4fbcaeddc14c8458b953709c9bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBehaviors:
-  - behaviorCode: 0
-    SequenceSpan: 4
-    MoveDifference: {x: 20, y: 0, z: 0}
-    RotationDegree: {x: 0, y: 180, z: 0}
-    Projectile: {fileID: 0}
-    ProjectileSpeed: 0
-    ShotDirection: {x: 0, y: 0, z: 0}
-    ShootTo: {fileID: 0}
-    LookAt: {fileID: 0}
-    DestroyEffect: {fileID: 0}
-    BackTo: 0
-  - behaviorCode: 2
-    SequenceSpan: 0
-    MoveDifference: {x: 0, y: 0, z: 0}
-    RotationDegree: {x: 0, y: 0, z: 0}
-    Projectile: {fileID: 1898775760669700909, guid: f003f1a3536bcda49a76011f4b5aa3d4,
-      type: 3}
-    ProjectileSpeed: 3
-    ShotDirection: {x: 1, y: 0, z: 0}
-    ShootTo: {fileID: 0}
-    LookAt: {fileID: 0}
-    DestroyEffect: {fileID: 0}
-    BackTo: 0
-  - behaviorCode: 5
-    SequenceSpan: 0
-    MoveDifference: {x: 0, y: 0, z: 0}
-    RotationDegree: {x: 0, y: 0, z: 0}
-    Projectile: {fileID: 0}
-    ProjectileSpeed: 0
-    ShotDirection: {x: 0, y: 0, z: 0}
-    ShootTo: {fileID: 0}
-    LookAt: {fileID: 0}
-    DestroyEffect: {fileID: 0}
-    BackTo: 0
-  reachMagnitude: 0.03
-  loop: 0
 --- !u!54 &3798739158022677184
 Rigidbody:
   m_ObjectHideFlags: 0

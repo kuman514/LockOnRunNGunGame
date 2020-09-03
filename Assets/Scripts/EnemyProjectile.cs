@@ -35,4 +35,16 @@ public class EnemyProjectile : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            // effect when a Player killed
+
+            collision.gameObject.SetActive(false);
+        }
+
+        Destroy(gameObject);
+    }
 }
