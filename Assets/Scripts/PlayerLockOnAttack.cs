@@ -93,7 +93,13 @@ public class PlayerLockOnAttack : MonoBehaviour
         {
             if (rch.transform.CompareTag("Target"))
             {
-                EnemyLockOnStatus els = rch.transform.GetComponent<EnemyLockOnStatus>();
+                EnemyLockOnStatus els = rch.transform.gameObject.GetComponent<EnemyLockOnStatus>();
+
+                if (els == null)
+                {
+                    Debug.LogError("EnemyLockOnStatus Not Found");
+                    continue;
+                }
 
                 if (lockedEnemies.Count < curMissiles && els.CheckLockable())
                 {

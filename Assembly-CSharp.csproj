@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\BackgroundBehavior.cs" />
     <Compile Include="Assets\Scripts\BackgroundSequence.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\EnemyFleet.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyLockOnStatus.cs" />
     <Compile Include="Assets\Scripts\EnemyLoot.cs" />
