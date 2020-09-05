@@ -62,22 +62,32 @@ PrefabInstance:
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.x
-      value: 12.82
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.y
-      value: 12.82
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.x
-      value: -12.82
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.y
-      value: -12.82
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[0].SequenceSpan
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[1].SequenceSpan
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533506, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
@@ -158,6 +168,16 @@ PrefabInstance:
         type: 3}
       propertyPath: HP
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[0].SequenceSpan
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[1].SequenceSpan
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533506, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
@@ -242,22 +262,32 @@ PrefabInstance:
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.x
-      value: 11.41
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.y
-      value: 11.41
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.x
-      value: -11.41
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.y
-      value: -11.41
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[0].SequenceSpan
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[1].SequenceSpan
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533506, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
@@ -342,22 +372,32 @@ PrefabInstance:
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.x
-      value: 14.23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[0].MoveDifference.y
-      value: 14.23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.x
-      value: -14.23
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
       propertyPath: enemyBehaviors.Array.data[1].MoveDifference.y
-      value: -14.23
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[0].SequenceSpan
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163984753538533504, guid: 6c87fb8a8fa47f64b8477417207861fb,
+        type: 3}
+      propertyPath: enemyBehaviors.Array.data[1].SequenceSpan
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 5163984753538533506, guid: 6c87fb8a8fa47f64b8477417207861fb,
         type: 3}
