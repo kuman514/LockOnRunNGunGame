@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public struct BackgroundBehavior
 {
-    public enum BehaviorCode { MoveAndRotate, LerpMoveAndRotate, Spawn, Destroy, Condition, ChangeBGM }
+    public enum BehaviorCode { MoveAndRotate, LerpMoveAndRotate, Spawn, Destroy, Condition, ChangeBGM, PlaySFX }
 
     public BehaviorCode behaviorCode;
 
@@ -38,4 +38,8 @@ public struct BackgroundBehavior
     // Only for ChangeBGM
     [Header("Change BGM Option")]
     public AudioClip BGMToChange;
+
+    // Only for Play SF
+    [Header("Play SFX Option")]
+    public AudioClip SFXToPlay;
 }

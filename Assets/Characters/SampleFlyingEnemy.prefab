@@ -161,9 +161,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a2a4fbcaeddc14c8458b953709c9bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBehaviors: []
+  enemyBehaviors:
+  - behaviorCode: 0
+    SequenceSpan: 0
+    MoveDifference: {x: 0, y: 0, z: 0}
+    RotationDegree: {x: 0, y: 0, z: 0}
+    Projectile: {fileID: 0}
+    ProjectileSpeed: 0
+    ShotDirection: {x: 0, y: 0, z: 0}
+    ShootTo: {fileID: 0}
+    LookAt: {fileID: 0}
+    DestroyEffect: {fileID: 0}
+    BackTo: 0
   reachMagnitude: 0.03
-  loop: 0
+  loop: 1
 --- !u!114 &4908379550914501475
 MonoBehaviour:
   m_ObjectHideFlags: 0

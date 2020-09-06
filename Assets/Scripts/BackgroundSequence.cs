@@ -8,6 +8,8 @@ public class BackgroundSequence : MonoBehaviour
     public float reachMagnitude;
     public bool loop;
 
+    public GameObject NextBG;
+
     private int bgbIndex;
     private float movrotTimer;
 
@@ -43,11 +45,18 @@ public class BackgroundSequence : MonoBehaviour
                 case BackgroundBehavior.BehaviorCode.ChangeBGM:
                     ChangeBGM();
                     break;
+                case BackgroundBehavior.BehaviorCode.PlaySFX:
+                    PlaySFX();
+                    break;
             }
         }
         else if (loop)
         {
             bgbIndex = 0;
+        }
+        else
+        {
+            NextLoad();
         }
     }
 
@@ -109,9 +118,15 @@ public class BackgroundSequence : MonoBehaviour
     {
         if (backgroundBehaviors[bgbIndex].ObjectToSpawn != null)
         {
-            Instantiate(backgroundBehaviors[bgbIndex].ObjectToSpawn,
+            GameObject enemy = Instantiate(backgroundBehaviors[bgbIndex].ObjectToSpawn,
                         backgroundBehaviors[bgbIndex].SpawnPosition,
                         backgroundBehaviors[bgbIndex].SpawnRotation);
+
+            EnemyBoss eb = enemy.GetComponent<EnemyBoss>();
+            if (eb != null)
+            {
+                eb.SetBG(gameObject);
+            }
         }
 
         ProceedToNext();
@@ -157,5 +172,31 @@ public class BackgroundSequence : MonoBehaviour
     {
         bgbIndex++;
         movrotTimer = 0f;
+    }
+
+    void PlaySFX()
+    {
+        if (backgroundBehaviors[bgbIndex].SFXToPlay != null)
+        {
+            // Play SFX
+        }
+
+        ProceedToNext();
+    }
+
+    void NextLoad()
+    {
+        if (NextBG != null)
+        {
+            GameObject n = Instantiate(NextBG, new Vector3(0, 0, 10f), new Quaternion(0, 0, 0, 0));
+            n.transform.SetParent(null);
+        }
+
+        Destroy(gameObject);
+    }
+
+    public void BossDestroyed()
+    {
+        backgroundBehaviors[bgbIndex].IsDestroyed = true;
     }
 }

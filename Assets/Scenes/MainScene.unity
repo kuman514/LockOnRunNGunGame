@@ -368,7 +368,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 2.7107536e-20, w: 7.737127e+25}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: -2.306054e+18, w: 2.1175824e-22}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1552,6 +1552,7 @@ MonoBehaviour:
     LoopMoveDirection: {x: 0, y: 0, z: 0}
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
   - behaviorCode: 2
     SequenceSpan: 0
     MoveDifference: {x: 0, y: 0, z: 0}
@@ -1568,6 +1569,7 @@ MonoBehaviour:
     LoopMoveDirection: {x: 0, y: 0, z: 0}
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
   - behaviorCode: 0
     SequenceSpan: 50
     MoveDifference: {x: -150, y: 0, z: 0}
@@ -1584,8 +1586,45 @@ MonoBehaviour:
     LoopMoveDirection: {x: 0, y: 0, z: 0}
     LoopSpeed: 0
     BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
+  - behaviorCode: 2
+    SequenceSpan: 50
+    MoveDifference: {x: -150, y: 0, z: 0}
+    RotationDegree: {x: 0, y: 0, z: 0}
+    ObjectToSpawn: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
+      type: 3}
+    SpawnPosition: {x: 0, y: 5, z: 10}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 0}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopMoveDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
+  - behaviorCode: 4
+    SequenceSpan: 50
+    MoveDifference: {x: -150, y: 0, z: 0}
+    RotationDegree: {x: 0, y: 0, z: 0}
+    ObjectToSpawn: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
+      type: 3}
+    SpawnPosition: {x: 0, y: 5, z: 10}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
+      type: 3}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopMoveDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
   reachMagnitude: 0
   loop: 0
+  NextBG: {fileID: 5437379375841632323, guid: 67af4abe33226214a9264cfa0698aa67, type: 3}
 --- !u!1 &704636485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,7 +2723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1058836567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3614,7 +3653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1325658655
 RectTransform:
   m_ObjectHideFlags: 0
