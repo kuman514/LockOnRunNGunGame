@@ -1549,8 +1549,6 @@ MonoBehaviour:
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
     LoopsWhileObjectAlive: {fileID: 0}
-    LoopMoveDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
     BGMToChange: {fileID: 0}
     SFXToPlay: {fileID: 0}
   - behaviorCode: 2
@@ -1566,13 +1564,11 @@ MonoBehaviour:
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
     LoopsWhileObjectAlive: {fileID: 0}
-    LoopMoveDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
     BGMToChange: {fileID: 0}
     SFXToPlay: {fileID: 0}
   - behaviorCode: 0
-    SequenceSpan: 50
-    MoveDifference: {x: -150, y: 0, z: 0}
+    SequenceSpan: 1
+    MoveDifference: {x: -140, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 2148752592434223761, guid: f8648cbd7bae0a849a64fd7a3c87d3ff,
       type: 3}
@@ -1583,13 +1579,11 @@ MonoBehaviour:
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
     LoopsWhileObjectAlive: {fileID: 0}
-    LoopMoveDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
     BGMToChange: {fileID: 0}
     SFXToPlay: {fileID: 0}
   - behaviorCode: 2
-    SequenceSpan: 50
-    MoveDifference: {x: -150, y: 0, z: 0}
+    SequenceSpan: 0
+    MoveDifference: {x: 0, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
     ObjectToSpawn: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
       type: 3}
@@ -1600,31 +1594,27 @@ MonoBehaviour:
     DestroyToProceed: {fileID: 0}
     IsDestroyed: 0
     LoopsWhileObjectAlive: {fileID: 0}
-    LoopMoveDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
     BGMToChange: {fileID: 0}
     SFXToPlay: {fileID: 0}
   - behaviorCode: 4
     SequenceSpan: 50
     MoveDifference: {x: -150, y: 0, z: 0}
     RotationDegree: {x: 0, y: 0, z: 0}
-    ObjectToSpawn: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
-      type: 3}
-    SpawnPosition: {x: 0, y: 5, z: 10}
+    ObjectToSpawn: {fileID: 0}
+    SpawnPosition: {x: 0, y: 0, z: 0}
     SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
     ObjectToDestroy: {fileID: 0}
     DestructionEffect: {fileID: 0}
     DestroyToProceed: {fileID: 483553994367601456, guid: 5e1ddbab960648b4f826eb72e5a68918,
       type: 3}
     IsDestroyed: 0
-    LoopsWhileObjectAlive: {fileID: 0}
-    LoopMoveDirection: {x: 0, y: 0, z: 0}
-    LoopSpeed: 0
+    LoopsWhileObjectAlive: {fileID: 5437379375841632323, guid: 67af4abe33226214a9264cfa0698aa67,
+      type: 3}
     BGMToChange: {fileID: 0}
     SFXToPlay: {fileID: 0}
   reachMagnitude: 0
   loop: 0
-  NextBG: {fileID: 5437379375841632323, guid: 67af4abe33226214a9264cfa0698aa67, type: 3}
+  NextBG: {fileID: 0}
 --- !u!1 &704636485
 GameObject:
   m_ObjectHideFlags: 0

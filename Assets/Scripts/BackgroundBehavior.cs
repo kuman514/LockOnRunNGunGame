@@ -32,8 +32,6 @@ public struct BackgroundBehavior
     public GameObject DestroyToProceed;
     public bool IsDestroyed;
     public GameObject LoopsWhileObjectAlive;
-    public Vector3 LoopMoveDirection;
-    public float LoopSpeed;
 
     // Only for ChangeBGM
     [Header("Change BGM Option")]

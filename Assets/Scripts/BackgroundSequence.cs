@@ -121,11 +121,23 @@ public class BackgroundSequence : MonoBehaviour
             GameObject enemy = Instantiate(backgroundBehaviors[bgbIndex].ObjectToSpawn,
                         backgroundBehaviors[bgbIndex].SpawnPosition,
                         backgroundBehaviors[bgbIndex].SpawnRotation);
+            enemy.transform.SetParent(null);
 
             EnemyBoss eb = enemy.GetComponent<EnemyBoss>();
             if (eb != null)
             {
                 eb.SetBG(gameObject);
+            }
+
+            if (bgbIndex + 1 < backgroundBehaviors.Length)
+            {
+                if (backgroundBehaviors[bgbIndex + 1].LoopsWhileObjectAlive != null)
+                {
+                    GameObject loopbg = Instantiate(backgroundBehaviors[bgbIndex + 1].LoopsWhileObjectAlive,
+                                                    new Vector3(0, 0, 10f), new Quaternion(0, 0, 0, 0));
+                    loopbg.transform.SetParent(null);
+                    backgroundBehaviors[bgbIndex + 1].LoopsWhileObjectAlive = loopbg;
+                }
             }
         }
 
@@ -148,13 +160,8 @@ public class BackgroundSequence : MonoBehaviour
     {
         if (backgroundBehaviors[bgbIndex].IsDestroyed)
         {
+            Destroy(backgroundBehaviors[bgbIndex].LoopsWhileObjectAlive);
             ProceedToNext();
-        }
-        else
-        {
-            // move looping background
-
-            // check enemy condition
         }
     }
 

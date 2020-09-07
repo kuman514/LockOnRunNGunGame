@@ -1910,6 +1910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5437379375841632322}
+  - component: {fileID: -6326399049328832626}
   m_Layer: 0
   m_Name: SampleBackGround
   m_TagString: Untagged
@@ -1935,6 +1936,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6326399049328832626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437379375841632323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c38d18a70e1dd54cb39c24e32ab4f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundBehaviors:
+  - behaviorCode: 0
+    SequenceSpan: 1
+    MoveDifference: {x: 0, y: 0, z: 0}
+    RotationDegree: {x: 0, y: 30, z: 0}
+    ObjectToSpawn: {fileID: 0}
+    SpawnPosition: {x: 0, y: 0, z: 0}
+    SpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    ObjectToDestroy: {fileID: 0}
+    DestructionEffect: {fileID: 0}
+    DestroyToProceed: {fileID: 0}
+    IsDestroyed: 0
+    LoopsWhileObjectAlive: {fileID: 0}
+    LoopMoveDirection: {x: 0, y: 0, z: 0}
+    LoopSpeed: 0
+    BGMToChange: {fileID: 0}
+    SFXToPlay: {fileID: 0}
+  reachMagnitude: 0
+  loop: 1
+  NextBG: {fileID: 0}
 --- !u!1 &5437379375905745961
 GameObject:
   m_ObjectHideFlags: 0
